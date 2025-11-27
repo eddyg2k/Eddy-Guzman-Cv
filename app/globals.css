@@ -17,6 +17,7 @@ body {
     radial-gradient(circle at 80% 0%, rgba(122, 92, 255, 0.08), transparent 28%),
     #050607;
   min-height: 100vh;
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
 }
 
 .section-shell {
@@ -83,4 +84,66 @@ body {
     clip-path: none;
     transform: none;
   }
+}
+
+/* New UI accents */
+.glass-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #6ef3ff 0%, #b8ffec 50%, #7e7aff 100%);
+  color: #050607;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(110, 243, 255, 0.35);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(110, 243, 255, 0.45);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.06);
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 9999px;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.bg-hero-grid {
+  background-image: linear-gradient(transparent 95%, rgba(255, 255, 255, 0.08) 96%),
+    linear-gradient(90deg, transparent 95%, rgba(255, 255, 255, 0.08) 96%);
+  background-size: 120px 120px;
+  opacity: 0.3;
 }

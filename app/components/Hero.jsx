@@ -67,6 +67,19 @@ export default function Hero() {
                 Specialist in GoHighLevel automations, Zapier and n8n orchestration,
                 AI agents, and precision workflow design that keeps revenue teams moving.
               </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.45 }}
+                className="flex flex-wrap gap-3"
+              >
+                <a href="#contact" className="btn-primary">
+                  Book a build session
+                </a>
+                <a href="#demo-videos" className="btn-secondary">
+                  View demos
+                </a>
+              </motion.div>
             </div>
             <motion.div
               initial={{ opacity: 0, scale: 0.92 }}
@@ -106,7 +119,7 @@ export default function Hero() {
           ].map((item) => (
             <span
               key={item}
-              className="rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-sm"
+              className="pill"
             >
               {item}
             </span>
