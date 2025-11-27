@@ -10,10 +10,11 @@ export default function HomePage() {
     <main className="snap-y snap-mandatory h-screen overflow-scroll bg-ink text-slate-100">
       <Intro />
       <Hero />
-      <LayeredBackground />
-      <Projects />
-      <Skills />
-      <About />
+      <LayeredBackground>
+        <Projects />
+        <Skills />
+        <About />
+      </LayeredBackground>
     </main>
   );
 }
