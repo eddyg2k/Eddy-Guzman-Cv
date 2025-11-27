@@ -71,14 +71,29 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.45 }}
-                className="flex flex-wrap gap-3"
+                className="flex items-center gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 shadow-inner backdrop-blur"
               >
-                <a href="#contact" className="btn-primary">
-                  Book a build session
-                </a>
-                <a href="#demo-videos" className="btn-secondary">
-                  View demos
-                </a>
+                <div className="relative flex h-14 w-9 items-center justify-center">
+                  <div className="h-full w-full rounded-full border border-white/50" aria-hidden>
+                    <motion.span
+                      className="absolute left-1/2 top-3 h-2 w-2 -translate-x-1/2 rounded-full bg-highlight shadow-[0_0_18px_rgba(110,243,255,0.65)]"
+                      animate={{ y: [0, 10, 0], opacity: [1, 0.2, 1] }}
+                      transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                    />
+                  </div>
+                  <motion.span
+                    className="absolute inset-0 rounded-full border border-highlight/30"
+                    animate={{ opacity: [0.4, 0.9, 0.4] }}
+                    transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+                    aria-hidden
+                  />
+                </div>
+                <div className="space-y-1 text-left">
+                  <p className="text-[0.7rem] uppercase tracking-[0.35em] text-slate-300">Scroll</p>
+                  <p className="text-sm leading-relaxed text-slate-200">
+                    Swipe or roll your mouse to move through each section.
+                  </p>
+                </div>
               </motion.div>
             </div>
             <motion.div

@@ -32,15 +32,15 @@ export default function IntroAnimation() {
         </div>
 
         <motion.div
-          className="relative flex h-44 w-44 items-center justify-center rounded-full border border-white/10 bg-white/5 p-5 shadow-2xl backdrop-blur"
+          className="relative flex h-44 w-44 items-center justify-center"
           initial={{ scale: 0.85, opacity: 0 }}
           animate={{ scale: 1, opacity: 1, y: [0, -8, 0] }}
           transition={{ duration: 1, delay: 0.15, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}
         >
           <motion.div
-            className="absolute inset-2 rounded-full border border-white/10"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 26, repeat: Infinity, ease: "linear" }}
+            className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(110,243,255,0.16)_0%,transparent_60%)]"
+            animate={{ scale: [0.95, 1.05, 0.98], opacity: [0.45, 0.7, 0.45] }}
+            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
             aria-hidden
           />
           <motion.div
@@ -54,7 +54,7 @@ export default function IntroAnimation() {
               alt="Eddy Guzman logo"
               fill
               sizes="96px"
-              className="object-contain drop-shadow-[0_12px_35px_rgba(0,0,0,0.45)]"
+              className="object-contain drop-shadow-[0_18px_40px_rgba(0,0,0,0.55)]"
               priority
             />
           </motion.div>
