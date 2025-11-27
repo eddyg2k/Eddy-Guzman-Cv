@@ -74,16 +74,16 @@ export default function LoomVideo({ url, title, description }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <motion.div
-              key="dialog"
-              role="dialog"
-              aria-modal="true"
-              className="relative w-[92vw] max-w-4xl overflow-hidden rounded-2xl border border-white/10 bg-slate-900/90 shadow-2xl"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.96 }}
-              transition={{ duration: 0.18 }}
-            >
+          <motion.div
+            key="dialog"
+            role="dialog"
+            aria-modal="true"
+            className="relative w-[96vw] max-w-5xl overflow-hidden rounded-2xl border border-white/10 bg-slate-900/90 shadow-2xl md:max-w-6xl"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.96 }}
+            transition={{ duration: 0.18 }}
+          >
               <button
                 type="button"
                 onClick={() => setOpen(false)}
@@ -92,7 +92,7 @@ export default function LoomVideo({ url, title, description }) {
               >
                 <span className="text-lg leading-none group-hover:scale-105">×</span>
               </button>
-              <div className="aspect-video w-full bg-black/70">
+              <div className="w-full max-h-[78vh] bg-black/70">
                 {ready ? (
                   <iframe
                     src={url}
@@ -100,7 +100,7 @@ export default function LoomVideo({ url, title, description }) {
                     allow="autoplay; encrypted-media"
                     allowFullScreen
                     loading="lazy"
-                    className="h-full w-full"
+                    className="h-[70vh] w-full sm:h-[72vh] lg:h-[74vh]"
                   />
                 ) : (
                   <div className="flex h-full w-full items-center justify-center text-sm text-slate-200/80">

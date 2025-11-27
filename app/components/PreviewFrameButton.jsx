@@ -60,17 +60,17 @@ export default function PreviewFrameButton({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <motion.div
-              key="frame-dialog"
-              role="dialog"
-              aria-modal="true"
-              aria-label={title}
-              className="relative w-[94vw] max-w-5xl overflow-hidden rounded-2xl border border-white/10 bg-slate-900/90 shadow-2xl"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.96 }}
-              transition={{ duration: 0.18 }}
-            >
+          <motion.div
+            key="frame-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-label={title}
+            className="relative w-[98vw] max-w-6xl overflow-hidden rounded-2xl border border-white/10 bg-slate-900/90 shadow-2xl"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.96 }}
+            transition={{ duration: 0.18 }}
+          >
               <button
                 type="button"
                 onClick={() => setOpen(false)}
@@ -89,17 +89,17 @@ export default function PreviewFrameButton({
                     ) : null}
                   </div>
                 </div>
-                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-white/10 bg-black/70 sm:aspect-[16/9] lg:aspect-[16/8]">
-                  {ready ? (
-                    <iframe
-                      src={url}
-                      title={title}
-                      allowFullScreen
-                      loading="lazy"
-                      className="h-full w-full"
-                    />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center text-sm text-slate-200/80">
+              <div className="relative h-[70vh] w-full overflow-hidden rounded-xl border border-white/10 bg-black/70 sm:h-[74vh] lg:h-[78vh]">
+                {ready ? (
+                  <iframe
+                    src={url}
+                    title={title}
+                    allowFullScreen
+                    loading="lazy"
+                    className="h-full w-full"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center text-sm text-slate-200/80">
                       Loading preview…
                     </div>
                   )}

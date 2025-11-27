@@ -107,6 +107,8 @@ export default function LayeredBackground({ children }) {
   const [index, setIndex] = useState(0);
   const busyRef = useRef(false);
   const unlockRef = useRef(null);
+  const touchStartY = useRef(null);
+  const touchStartTime = useRef(null);
 
   // Prevent spamming transitions by setting a lock
   const setBusyLock = () => {
@@ -125,6 +127,36 @@ export default function LayeredBackground({ children }) {
       setBusyLock();
       setIndex(clamped);
     }
+  };
+
+  const goToNextSlide = () => goTo(index + 1);
+  const goToPrevSlide = () => goTo(index - 1);
+
+  // --- TOUCH + GESTURE SUPPORT ---
+  const onTouchStart = (e) => {
+    touchStartY.current = e.touches[0].clientY;
+    touchStartTime.current = Date.now();
+  };
+
+  const onTouchMove = (e) => {
+    if (!touchStartY.current) return;
+
+    const dy = e.touches[0].clientY - touchStartY.current;
+    const elapsed = Date.now() - touchStartTime.current;
+
+    const distanceEnough = Math.abs(dy) > 40;
+    const fastSwipe = elapsed < 220 && Math.abs(dy) > 15;
+
+    if (distanceEnough || fastSwipe) {
+      if (dy < 0) goToNextSlide();
+      else goToPrevSlide();
+
+      touchStartY.current = null;
+    }
+  };
+
+  const onTouchEnd = () => {
+    touchStartY.current = null;
   };
 
   // Listen for scroll wheel events to move between slides
@@ -165,6 +197,10 @@ export default function LayeredBackground({ children }) {
     <Section
       id="layered-bg"
       className="fixed inset-0 isolate overflow-hidden bg-ink text-slate-100"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+      wrap={false}
     >
       {/* Background peel stack */}
       <div className="layer-stack absolute inset-0 -z-10" aria-hidden>
@@ -182,6 +218,21 @@ export default function LayeredBackground({ children }) {
       {/* Slide content – center children */}
       <div className="relative z-10 mx-auto flex h-full max-w-5xl flex-col justify-center px-6 py-10 lg:px-10 lg:py-16">
         {currentSlide}
+      </div>
+
+      {/* Navigation dots */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-6 z-20 flex justify-center sm:bottom-8">
+        <div className="pointer-events-auto inline-flex items-center gap-3 rounded-full bg-black/30 px-4 py-3 shadow-lg shadow-black/40 backdrop-blur">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              type="button"
+              className={`h-4 w-4 rounded-full border-2 transition ${idx === index ? "bg-white border-white" : "bg-white/20 border-white/40"} active:scale-90 touch-manipulation`}
+              onClick={() => goTo(idx)}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </Section>
   );
