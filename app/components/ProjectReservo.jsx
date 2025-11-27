@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Section from "./Section";
-import PreviewFrameButton from "./PreviewFrameButton";
 
 const highlights = [
   "24/7 inbound calls with CRM sync",
@@ -34,16 +33,27 @@ export default function ProjectReservo() {
                 <span className="h-2 w-2 rounded-full bg-emerald-400" aria-hidden />
                 Live demo available
               </span>
-              <PreviewFrameButton
-                url="https://reservo.live"
-                title="Reservo voice AI preview"
-                description="Call handling, booking and CRM sync in a single flow."
-                label="Launch live preview"
-              />
+              <a
+                href="https://reservo.live"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-highlight/80 via-white to-accent text-slate-900"
+              >
+                <span aria-hidden className="text-lg">↗</span>
+                Open in new tab
+              </a>
             </div>
-            <p className="mt-4 text-base leading-relaxed text-slate-200/85">
-              Reservo handles calls end‑to‑end: gathering context, booking, updating CRMs and delivering confirmations. The browser button connects directly to the agent—no telephony, minimal lag.
-            </p>
+            <div className="mt-4 space-y-2 text-base leading-relaxed text-slate-200/85">
+              <p>
+                Reservo handles calls end‑to‑end: gathering context, booking, updating CRMs and delivering confirmations. The demo opens in a separate tab because the embedded preview is paused.
+              </p>
+              <p>
+                Built for Spanish-speaking restaurants, it requests microphone access for live conversations. Backend actions are delayed in this demo, but N8N automation is available for reservation workflows.
+              </p>
+              <p>
+                No custom instructions or complex workflows are loaded here—this is a streamlined proof of concept focused on seat checks, booking steps, and database updates.
+              </p>
+            </div>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               {highlights.map((item) => (
                 <div key={item} className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/5 p-3 text-sm text-slate-200/85">
