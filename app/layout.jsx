@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter, Space_Grotesk } from "next/font/google";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" });
@@ -21,6 +22,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
       <body className="bg-ink text-slate-100 antialiased selection:bg-highlight/40 selection:text-white">
+        <Script src="https://cdn.tailwindcss.com" strategy="beforeInteractive" />
+        <Script src="/_sdk/element_sdk.js" strategy="lazyOnload" />
         {children}
       </body>
     </html>
