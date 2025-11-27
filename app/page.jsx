@@ -7,13 +7,12 @@ import About from "./sections/About";
 
 export default function HomePage() {
   return (
-    <main className="snap-y snap-mandatory h-screen overflow-scroll bg-ink text-slate-100">
+    <LayeredBackground>
       <Intro />
       <Hero />
-      <LayeredBackground />
       <Projects />
       <Skills />
       <About />
-    </main>
+    </LayeredBackground>
   );
 }
