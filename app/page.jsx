@@ -3,7 +3,9 @@ import Hero from "./components/Hero";
 import Experience from "./components/Experience";
 import ProjectReservo from "./components/ProjectReservo";
 import ProjectElemental from "./components/ProjectElemental";
-import DemoVideos from "./components/DemoVideos";
+import SimpleFunnelDemo from "./components/SimpleFunnelDemo";
+import VoiceAIAgentDemo from "./components/VoiceAIAgentDemo";
+import CustomObjectsDemo from "./components/CustomObjectsDemo";
 import DiscordBots from "./components/DiscordBots";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -23,7 +25,9 @@ export default function HomePage() {
       <ProjectReservo />
       <ProjectElemental />
       {/* Demo videos */}
-      <DemoVideos />
+      <SimpleFunnelDemo />
+      <VoiceAIAgentDemo />
+      <CustomObjectsDemo />
       {/* Bots and educational apps */}
       <DiscordBots />
       {/* About me */}
