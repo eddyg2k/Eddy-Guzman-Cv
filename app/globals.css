@@ -1,1 +1,29 @@
-/* tailwind placeholder */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: radial-gradient(circle at 20% 20%, rgba(110, 243, 255, 0.06), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(122, 92, 255, 0.08), transparent 28%),
+    #050607;
+  min-height: 100vh;
+}
+
+.section-shell {
+  max-width: 1080px;
+  width: 100%;
+}
+
+.glow-ring {
+  background: radial-gradient(circle, rgba(110, 243, 255, 0.12), transparent 55%);
+  filter: blur(40px);
+}
+
+.soft-border {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
