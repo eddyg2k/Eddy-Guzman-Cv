@@ -39,7 +39,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <Section id="projects" className="bg-gradient-to-b from-ink via-[#090a10] to-ink">
+    <Section id="projects" className="bg-cinematic-blue bg-gradient-to-b from-ink via-[#090a10] to-ink">
       <div className="flex h-full w-full flex-col justify-center gap-10">
         <div className="flex flex-col gap-3">
           <p className="text-xs uppercase tracking-[0.3em] text-slate-400">Selected builds</p>

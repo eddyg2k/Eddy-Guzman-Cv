@@ -5,7 +5,7 @@ import Section from "../components/Section";
 
 export default function About() {
   return (
-    <Section id="about" className="bg-gradient-to-b from-ink via-[#0f1017] to-black">
+    <Section id="about" className="bg-cinematic-blue bg-gradient-to-b from-ink via-[#0f1017] to-black">
       <div className="flex h-full w-full flex-col justify-center gap-8">
         <div className="flex flex-col gap-3">
           <p className="text-xs uppercase tracking-[0.3em] text-slate-400">About</p>

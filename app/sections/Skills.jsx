@@ -15,7 +15,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <Section id="skills" className="bg-gradient-to-b from-ink via-[#0b0d13] to-ink">
+    <Section id="skills" className="bg-cinematic-blue bg-gradient-to-b from-ink via-[#0b0d13] to-ink">
       <div className="flex h-full w-full flex-col justify-center gap-10">
         <div className="flex flex-col gap-3">
           <p className="text-xs uppercase tracking-[0.3em] text-slate-400">Capabilities</p>
