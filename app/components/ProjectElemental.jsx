@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Section from "./Section";
+import PreviewFrameButton from "./PreviewFrameButton";
 
 const pillars = [
   "Logic‑first ESL curriculum with bilingual mental models",
@@ -32,14 +33,12 @@ export default function ProjectElemental() {
                 <p className="text-xs uppercase tracking-[0.25em] text-slate-300">Landing Experience</p>
                 <h3 className="text-2xl font-semibold text-white">Interactive hero + curriculum map</h3>
               </div>
-              <a
-                href="https://elemental-english-web-app.vercel.app/landing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary"
-              >
-                View landing
-              </a>
+              <PreviewFrameButton
+                url="https://elemental-english-web-app.vercel.app/landing"
+                title="Elemental English landing"
+                description="Interactive storytelling with the curriculum map baked into the page."
+                label="Open landing preview"
+              />
             </div>
             <p className="mt-4 text-base leading-relaxed text-slate-200/85">
               The page demonstrates animated storytelling, clustered concepts and a clear CTA path—an example of how I pair pedagogy with modern UX.

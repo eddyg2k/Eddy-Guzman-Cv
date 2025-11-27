@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Section from "./Section";
+import PreviewFrameButton from "./PreviewFrameButton";
 
 const highlights = [
   "24/7 inbound calls with CRM sync",
@@ -28,19 +29,17 @@ export default function ProjectReservo() {
 
         <div className="grid gap-4 lg:grid-cols-3">
           <motion.div className="glass-card rounded-2xl border border-white/5 bg-gradient-to-br from-highlight/15 via-white/5 to-accent/10 p-6 shadow-xl lg:col-span-2" whileHover={{ y: -6 }}>
-            <div className="flex items-center gap-3 text-sm text-slate-200/80">
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 py-2 text-sm text-slate-200/80">
                 <span className="h-2 w-2 rounded-full bg-emerald-400" aria-hidden />
                 Live demo available
               </span>
-              <a
-                className="btn-secondary"
-                href="https://reservo.live"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit reservo.live
-              </a>
+              <PreviewFrameButton
+                url="https://reservo.live"
+                title="Reservo voice AI preview"
+                description="Call handling, booking and CRM sync in a single flow."
+                label="Launch live preview"
+              />
             </div>
             <p className="mt-4 text-base leading-relaxed text-slate-200/85">
               Reservo handles calls end‑to‑end: gathering context, booking, updating CRMs and delivering confirmations. The browser button connects directly to the agent—no telephony, minimal lag.
