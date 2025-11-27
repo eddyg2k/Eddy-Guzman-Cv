@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Section from "./Section";
 
 const sections = [
@@ -83,62 +83,32 @@ function backgroundStyle(layer) {
 }
 
 export default function LayeredBackground() {
-  const [sectionIndex, setSectionIndex] = useState(0);
   const [activeBackground, setActiveBackground] = useState(0);
-  const busyRef = useRef(false);
-  const unlockRef = useRef(null);
-  const motionAllowed = useReducedMotionSafe();
-
-  const setBusyLock = () => {
-    busyRef.current = true;
-    if (unlockRef.current) {
-      clearTimeout(unlockRef.current);
-    }
-    unlockRef.current = setTimeout(() => {
-      busyRef.current = false;
-    }, 1000);
-  };
-
-  const showBackground = (index) => {
-    setActiveBackground(index);
-  };
-
-  const goTo = (index) => {
-    if (busyRef.current || index === sectionIndex) return;
-    setBusyLock();
-    showBackground(index);
-    setSectionIndex(index);
-  };
+  const sectionRefs = useRef([]);
 
   useEffect(() => {
-    if (!motionAllowed) return undefined;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const layerIndex = Number(entry.target.dataset.layer || 0);
+            setActiveBackground(layerIndex);
+          }
+        });
+      },
+      { threshold: 0.45 }
+    );
 
-    const interval = setInterval(() => {
-      if (busyRef.current) return;
-      setBusyLock();
-      setSectionIndex((prev) => {
-        const next = (prev + 1) % sections.length;
-        setActiveBackground(next);
-        return next;
-      });
-    }, 9000);
+    sectionRefs.current.forEach((section) => {
+      if (section) observer.observe(section);
+    });
 
-    return () => clearInterval(interval);
-  }, [motionAllowed]);
-
-  useEffect(() => {
-    return () => {
-      if (unlockRef.current) {
-        clearTimeout(unlockRef.current);
-      }
-    };
+    return () => observer.disconnect();
   }, []);
 
-  const renderedSection = useMemo(() => renderSection(sectionIndex), [sectionIndex]);
-
   return (
-    <Section id="layered-bg" className="relative isolate overflow-hidden">
-      <div className="layer-stack absolute inset-0 -z-10" aria-hidden>
+    <div className="relative isolate">
+      <div className="layer-stack fixed inset-0 -z-10" aria-hidden>
         {backgrounds.map((layer, idx) => (
           <div
             key={layer.start + idx}
@@ -150,78 +120,40 @@ export default function LayeredBackground() {
         ))}
       </div>
 
-      <div className="relative z-20 mx-auto flex max-w-4xl flex-col items-start gap-8 rounded-3xl border border-white/10 bg-black/30 px-8 py-10 shadow-2xl backdrop-blur lg:px-12 lg:py-14">
-        <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.35em] text-slate-200">
-            {sections[sectionIndex].kicker}
-          </div>
-          <div className="flex items-center gap-3 text-xs text-slate-300">
-            <span className="h-px w-12 bg-white/30" aria-hidden />
-            State-driven animation
-          </div>
-        </div>
-
-        {renderedSection}
-
-        <div className="flex flex-wrap items-center gap-4 text-sm text-slate-200">
-          <button
-            type="button"
-            onClick={() => goTo((sectionIndex + sections.length - 1) % sections.length)}
-            className="rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:border-white/30 hover:bg-white/10"
+      <div className="relative z-10 flex flex-col">
+        {sections.map((section, idx) => (
+          <Section
+            key={section.tag}
+            id={`layer-${idx}`}
+            className="isolate overflow-hidden"
+            sectionRef={(el) => {
+              sectionRefs.current[idx] = el;
+            }}
+            data-layer={idx}
           >
-            Previous
-          </button>
-          <button
-            type="button"
-            onClick={() => goTo((sectionIndex + 1) % sections.length)}
-            className="rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:border-white/30 hover:bg-white/10"
-          >
-            Next
-          </button>
-          <div className="flex items-center gap-2">
-            {sections.map((section, idx) => (
-              <button
-                key={section.tag}
-                type="button"
-                aria-label={`Show ${section.tag}`}
-                onClick={() => goTo(idx)}
-                className={`h-2.5 w-2.5 rounded-full border border-white/30 transition ${
-                  idx === sectionIndex ? "bg-white" : "bg-white/10 hover:bg-white/30"
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-    </Section>
-  );
-}
+            <div className="relative z-20 mx-auto flex max-w-4xl flex-col items-start gap-8 rounded-3xl border border-white/10 bg-black/30 px-8 py-10 shadow-2xl backdrop-blur lg:px-12 lg:py-14">
+              <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.35em] text-slate-200">
+                  {section.kicker}
+                </div>
+                <div className="flex items-center gap-3 text-xs text-slate-300">
+                  <span className="h-px w-12 bg-white/30" aria-hidden />
+                  State-driven animation
+                </div>
+              </div>
 
-function renderSection(index) {
-  const section = sections[index];
-  return (
-    <div className="flex flex-col gap-4 text-left">
-      <div className="inline-flex items-center gap-3 text-sm text-slate-200">
-        <span className="rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.25em]">{section.tag}</span>
-        <span className="text-white/70">renderSection()</span>
+              <div className="flex flex-col gap-4 text-left">
+                <div className="inline-flex items-center gap-3 text-sm text-slate-200">
+                  <span className="rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.25em]">{section.tag}</span>
+                  <span className="text-white/70">renderSection()</span>
+                </div>
+                <h2 className="font-display text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">{section.title}</h2>
+                <p className="max-w-3xl text-lg text-slate-100/90">{section.body}</p>
+              </div>
+            </div>
+          </Section>
+        ))}
       </div>
-      <h2 className="font-display text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">{section.title}</h2>
-      <p className="max-w-3xl text-lg text-slate-100/90">{section.body}</p>
     </div>
   );
-}
-
-function useReducedMotionSafe() {
-  const [motionAllowed, setMotionAllowed] = useState(true);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const updateMotionPreference = () => setMotionAllowed(!mediaQuery.matches);
-    updateMotionPreference();
-    mediaQuery.addEventListener("change", updateMotionPreference);
-
-    return () => mediaQuery.removeEventListener("change", updateMotionPreference);
-  }, []);
-
-  return motionAllowed;
 }

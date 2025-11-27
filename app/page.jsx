@@ -7,7 +7,7 @@ import About from "./sections/About";
 
 export default function HomePage() {
   return (
-    <main className="snap-y snap-mandatory h-screen overflow-scroll bg-ink text-slate-100">
+    <main className="min-h-screen bg-ink text-slate-100">
       <Intro />
       <Hero />
       <LayeredBackground />
