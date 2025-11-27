@@ -98,12 +98,14 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.65rem 1.1rem;
+  padding: 0.9rem 1.4rem;
   border-radius: 9999px;
   background: linear-gradient(135deg, #6ef3ff 0%, #b8ffec 50%, #7e7aff 100%);
   color: #050607;
   font-weight: 700;
-  box-shadow: 0 10px 30px rgba(110, 243, 255, 0.35);
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  box-shadow: 0 16px 40px rgba(110, 243, 255, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.4);
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 

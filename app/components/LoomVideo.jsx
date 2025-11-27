@@ -52,6 +52,7 @@ export default function LoomVideo({ url, title, description }) {
               className="btn-primary"
               aria-label={`Play ${title}`}
             >
+              <span aria-hidden className="text-lg leading-none">▶</span>
               Watch now
             </button>
           </div>

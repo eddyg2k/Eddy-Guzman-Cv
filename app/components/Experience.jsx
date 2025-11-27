@@ -45,7 +45,6 @@ export default function Experience() {
               whether that’s a full revenue engine or a targeted AI workflow.
             </p>
           </div>
-          <button className="btn-primary self-start md:self-center">View capabilities</button>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
