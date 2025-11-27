@@ -4,8 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Section from "../components/Section";
 import LoomVideo from "../components/LoomVideo";
-import thumb from "../../media/project-thumb-placeholder.png";
-import heroBg from "../../media/hero-bg-placeholder.jpg";
+import logoMark from "../../media/no backg.svg";
 
 const projects = [
   {
@@ -13,28 +12,28 @@ const projects = [
     description:
       "Custom voice pipelines that capture inbound calls, qualify leads, and route them into GHL and CRM journeys automatically.",
     tags: ["LLM", "Voice", "GHL", "Webhooks"],
-    media: thumb
+    media: logoMark
   },
   {
     title: "GHL Automation Systems",
     description:
       "Revenue-grade GoHighLevel automations with triggers, event listeners, and agentic follow-up sequences that never miss a beat.",
     tags: ["GoHighLevel", "Events", "Agents"],
-    media: heroBg
+    media: logoMark
   },
   {
     title: "Multi-platform Workflow Orchestration",
     description:
       "Zapier + n8n + Make.com orchestration layers connecting data warehouses, messaging, scheduling, and compliance steps.",
     tags: ["Zapier", "n8n", "Make.com"],
-    media: thumb
+    media: logoMark
   },
   {
     title: "AI-powered Job Applicant Screening",
     description:
       "Structured vetting flows for applicants with AI summaries, hiring manager alerts, and CRM enrichment in real time.",
     tags: ["AI Agents", "Screening", "Enrichment"],
-    media: heroBg
+    media: logoMark
   }
 ];
 
@@ -78,7 +77,8 @@ export default function Projects() {
                     src={project.media}
                     alt={project.title}
                     className="h-28 w-full object-cover opacity-80"
-                    placeholder="blur"
+                    width={400}
+                    height={160}
                   />
                 </div>
                 <div className="flex flex-col gap-2">
