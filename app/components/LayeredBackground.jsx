@@ -3,8 +3,8 @@
 import { Children, useEffect, useMemo, useRef, useState } from "react";
 import Section from "./Section";
 
-// Same gradient stack you already had – one per slide.
-// If you have more slides than backgrounds, they loop.
+// Gradient stack used for background transitions. If there are more slides than
+// backgrounds, colours will repeat.
 const backgrounds = [
   {
     start: "#161a2b",
@@ -51,8 +51,14 @@ function backgroundStyle(layer) {
   };
 }
 
+/**
+ * LayeredBackground orchestrates slide transitions, background peel effects and scroll
+ * navigation. It expects React children—each child becomes a slide.
+ * The first slide is shown on load and auto‑advances after 5s. Scroll navigation
+ * clamps to the first and last slide (no looping).
+ */
 export default function LayeredBackground({ children }) {
-  // Turn Intro / Hero / Projects / Skills / About into slides
+  // Convert children to array so we can index them
   const slides = useMemo(() => Children.toArray(children), [children]);
   const total = slides.length || 1;
 
@@ -60,7 +66,7 @@ export default function LayeredBackground({ children }) {
   const busyRef = useRef(false);
   const unlockRef = useRef(null);
 
-  // simple lock so fast wheel doesn’t spam transitions
+  // Prevent spamming transitions by setting a lock
   const setBusyLock = () => {
     busyRef.current = true;
     if (unlockRef.current) clearTimeout(unlockRef.current);
@@ -69,28 +75,41 @@ export default function LayeredBackground({ children }) {
     }, 800);
   };
 
+  // Navigate to a slide index without looping
   const goTo = (next) => {
     if (busyRef.current) return;
-    const safe = (next + total) % total;
-    setBusyLock();
-    setIndex(safe);
+    const clamped = Math.max(0, Math.min(next, total - 1));
+    if (clamped !== index) {
+      setBusyLock();
+      setIndex(clamped);
+    }
   };
 
-  // Wheel = next/prev slide, no real page scroll
+  // Listen for scroll wheel events to move between slides
   useEffect(() => {
     const onWheel = (e) => {
       e.preventDefault();
       if (busyRef.current || total <= 1) return;
-
       const direction = e.deltaY > 0 ? 1 : -1;
       goTo(index + direction);
     };
-
     window.addEventListener("wheel", onWheel, { passive: false });
     return () => window.removeEventListener("wheel", onWheel);
   }, [index, total]);
 
-  // Clean up lock timeout
+  // Auto‑advance after 5 seconds on the first slide
+  useEffect(() => {
+    if (index === 0 && total > 1) {
+      const timer = setTimeout(() => {
+        if (!busyRef.current && index === 0) {
+          goTo(index + 1);
+        }
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [index, total]);
+
+  // Clean up the lock timer on unmount
   useEffect(() => {
     return () => {
       if (unlockRef.current) clearTimeout(unlockRef.current);
@@ -110,9 +129,7 @@ export default function LayeredBackground({ children }) {
         {backgrounds.map((layer, idx) => (
           <div
             key={layer.start + idx}
-            className={`bg-layer ${
-              activeBgIndex === idx ? "is-active" : ""
-            }`}
+            className={`bg-layer ${activeBgIndex === idx ? "is-active" : ""}`}
             style={backgroundStyle(layer)}
           >
             <div className="bg-overlay" />
@@ -120,7 +137,7 @@ export default function LayeredBackground({ children }) {
         ))}
       </div>
 
-      {/* Slide content – always centered, only one child visible */}
+      {/* Slide content – center children */}
       <div className="relative z-10 mx-auto flex h-full max-w-5xl flex-col justify-center px-6 py-10 lg:px-10 lg:py-16">
         {currentSlide}
       </div>

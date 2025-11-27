@@ -2,9 +2,10 @@
 
 import { motion } from "framer-motion";
 
+// Basic fade‑in animation used by all sections. Sections take up full height and snap into view.
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0 }
+  show: { opacity: 1, y: 0 },
 };
 
 export default function Section({ id, children, className = "" }) {
