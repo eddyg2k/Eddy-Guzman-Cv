@@ -2,6 +2,9 @@
 
 import { motion } from "framer-motion";
 
+/**
+ * LoomVideo embeds a Loom video inside a responsive container with a slight motion fade.
+ */
 export default function LoomVideo({ url, title }) {
   return (
     <motion.div
