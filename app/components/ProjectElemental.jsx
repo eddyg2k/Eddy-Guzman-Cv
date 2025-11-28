@@ -66,66 +66,47 @@ export default function ProjectElemental() {
           </div>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-          <motion.div
-            whileHover={{ y: -4 }}
-            className="glass-card rounded-2xl border border-white/5 bg-gradient-to-br from-white/5 via-white/5 to-highlight/10 p-6 shadow-xl backdrop-blur"
-          >
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-              <div className="space-y-1">
-                <p className="text-xs uppercase tracking-[0.25em] text-slate-300">Landing experience</p>
-                <h3 className="text-2xl font-semibold text-white">Interactive hero + curriculum map</h3>
-              </div>
-              <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-200">
-                Embedded preview
-              </span>
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="space-y-6">
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href="https://elemental-english-web-app.vercel.app/landing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Open Elemental preview
+              </a>
+              <a className="btn-secondary" href="#contact">
+                Book a walkthrough
+              </a>
             </div>
-            <p className="mt-4 text-base leading-relaxed text-slate-200/90">
-              The iframe sits inside the same hero-style shell, so the preview, copy and CTA area align with the new layout. It
-              scales with the container for a clean fit on all screens.
+            <p className="max-w-3xl text-base leading-relaxed text-slate-200/90">
+              Same vibe as the hero: uncluttered, fast and focused on the CTA. The iframe stretches edge-to-edge so the
+              landing and curriculum map feel like a full-screen experience instead of a card.
             </p>
-            <div className="mt-5 overflow-hidden rounded-xl border border-white/10 bg-black/60 shadow-inner">
-              <div className="relative aspect-video w-full">
-                <iframe
-                  src="https://elemental-english-web-app.vercel.app/landing"
-                  title="Elemental English landing"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 h-full w-full rounded-xl border-0"
-                />
-              </div>
-            </div>
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            <div className="space-y-3 text-sm text-slate-100/95">
               {pillars.map((item) => (
-                <div
-                  key={item}
-                  className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/10 p-3 text-sm text-slate-100"
-                >
+                <div key={item} className="flex items-start gap-3 border-b border-white/10 pb-3 last:border-0 last:pb-0">
                   <span className="mt-1 h-2.5 w-2.5 rounded-full bg-accent" aria-hidden />
-                  <p>{item}</p>
+                  <p className="leading-relaxed">{item}</p>
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           <motion.div
-            whileHover={{ y: -4 }}
-            className="glass-card flex flex-col justify-between rounded-2xl border border-white/5 bg-white/5 p-6 shadow-xl backdrop-blur"
+            whileHover={{ scale: 1.01 }}
+            className="relative overflow-hidden rounded-3xl border border-white/10 bg-black/70 shadow-[0_30px_90px_rgba(0,0,0,0.45)]"
           >
-            <div className="space-y-3">
-              <p className="text-xs uppercase tracking-[0.25em] text-slate-300">Methodology</p>
-              <h3 className="text-2xl font-semibold text-white">Elemental approach</h3>
-              <p className="text-sm leading-relaxed text-slate-200/85">
-                Teach by patterns, logic and bilingual anchors. This block mirrors the hero status card so the whole section
-                feels cohesive with Reservo and the overview above.
-              </p>
-            </div>
-            <div className="mt-4 flex flex-wrap gap-2 text-xs uppercase tracking-[0.2em] text-slate-200">
-              {"Clusters • First principles • UX motion • Bilingual".split(" • ").map((chip) => (
-                <span key={chip} className="pill">
-                  {chip}
-                </span>
-              ))}
+            <div className="relative aspect-[4/3] w-full">
+              <iframe
+                src="https://elemental-english-web-app.vercel.app/landing"
+                title="Elemental English landing"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full border-0"
+              />
             </div>
           </motion.div>
         </div>
