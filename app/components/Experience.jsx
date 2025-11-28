@@ -60,53 +60,51 @@ export default function Experience() {
           </div>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="glass-card rounded-2xl border border-white/5 bg-white/5 p-6 shadow-xl backdrop-blur">
-            <div className="flex items-center justify-between gap-3">
-              <div className="space-y-1">
-                <p className="text-xs uppercase tracking-[0.25em] text-slate-300">Build tracks</p>
-                <h3 className="text-2xl font-semibold text-white">What ships with each project</h3>
-              </div>
-              <span className="rounded-full bg-highlight/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-highlight">
-                Live
-              </span>
+        <div className="grid items-start gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="space-y-6">
+            <div className="flex flex-wrap items-center gap-4">
+              <a className="btn-primary" href="#contact">
+                Start a build
+              </a>
+              <a className="btn-secondary" href="#reservo-demo">
+                View live voice demo
+              </a>
             </div>
-            <div className="mt-5 space-y-4">
-              {capabilityRows.map((item) => (
-                <div
-                  key={item.title}
-                  className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/5 p-4 text-sm text-slate-200/90"
-                >
-                  <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-highlight/25 text-base text-white">
-                    ↺
-                  </span>
-                  <div>
-                    <p className="font-semibold text-white">{item.title}</p>
-                    <p className="mt-1 leading-relaxed">{item.copy}</p>
+            <div className="space-y-5 text-slate-200/90">
+              <p className="text-base leading-relaxed">
+                Every engagement runs like the hero: a clear frame, a CTA you can actually click, and demos you can try. I
+                keep the copy tight and the UX light so operators know exactly what is live.
+              </p>
+              <div className="grid gap-5 sm:grid-cols-2">
+                {capabilityRows.map((item) => (
+                  <div key={item.title} className="space-y-2">
+                    <div className="flex items-center gap-3 text-sm uppercase tracking-[0.25em] text-slate-300">
+                      <span className="h-2 w-2 rounded-full bg-highlight" aria-hidden />
+                      {item.title}
+                    </div>
+                    <p className="text-sm leading-relaxed text-slate-100/90">{item.copy}</p>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 
           <motion.div
-            whileHover={{ y: -4 }}
-            className="glass-card flex flex-col gap-4 rounded-2xl border border-white/5 bg-gradient-to-br from-highlight/15 via-white/5 to-accent/10 p-6 shadow-xl backdrop-blur"
+            whileHover={{ y: -2 }}
+            className="space-y-5 rounded-3xl border border-white/10 bg-gradient-to-br from-highlight/10 via-transparent to-accent/10 p-6 shadow-[0_30px_90px_rgba(0,0,0,0.45)]"
           >
-            <div className="flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-slate-200">
+            <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-slate-200">
               <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_0_6px_rgba(16,185,129,0.2)]" aria-hidden />
               Highlights
             </div>
             <p className="text-sm leading-relaxed text-slate-200/85">
-              A quick snapshot before diving into each demo below. Same container as the hero, just tuned for the projects.
+              A snapshot you can skim as you scroll. No heavy cards—just the same airy layout as the hero so the overview
+              lands fast.
             </p>
-            <div className="grid gap-3">
+            <div className="space-y-3 text-sm text-slate-100/95">
               {highlights.map((item) => (
-                <div
-                  key={item}
-                  className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/10 p-3 text-sm text-slate-100"
-                >
-                  <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/20 text-sm text-white">
+                <div key={item} className="flex items-start gap-3 border-b border-white/10 pb-3 last:border-0 last:pb-0">
+                  <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/15 text-white">
                     •
                   </span>
                   <p className="leading-relaxed">{item}</p>
