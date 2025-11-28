@@ -23,19 +23,19 @@ export default function Contact() {
             <div className="mt-3 space-y-2 text-lg text-slate-100">
               <p>
                 <strong>Email:</strong>{" "}
-                <a href="mailto:eddy@example.com" className="text-highlight underline">
-                  eddy@example.com
+                <a href="mailto:EDUARDOGUZMANQ@GMAIL.COM" className="text-highlight underline">
+                  EDUARDOGUZMANQ@GMAIL.COM
                 </a>
               </p>
               <p>
-                <strong>Phone:</strong> +52 XXX XXX XXXX
+                <strong>Phone:</strong> <a href="tel:+529999053013" className="text-highlight underline">+52 999-905-3013</a>
               </p>
               <p>
                 <strong>Location:</strong> Mérida, Yucatán, Mexico
               </p>
             </div>
             <a
-              href="mailto:eddy@example.com"
+              href="mailto:EDUARDOGUZMANQ@GMAIL.COM"
               className="btn-primary mt-4 inline-flex w-full justify-center text-center"
             >
               Send an email
