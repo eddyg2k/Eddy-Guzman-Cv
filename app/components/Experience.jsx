@@ -3,86 +3,117 @@
 import { motion } from "framer-motion";
 import Section from "./Section";
 
-const capabilities = [
+const capabilityRows = [
   {
-    title: "Workflow architecture",
-    copy: "Blueprinting revenue ops, routing, SLAs and safety nets so teams never lose track of a lead.",
+    title: "Voice & chat automations",
+    copy: "Agents that listen, speak and sync context back to CRMs without dropping details.",
   },
   {
-    title: "Voice AI systems",
-    copy: "Custom call logic, memory, actions and pipeline syncing tuned for hospitality and service brands.",
+    title: "Full-stack workflow builds",
+    copy: "GHL, Zapier and n8n stitched together with custom API steps, QA and observability.",
   },
   {
-    title: "Automation stacks",
-    copy: "GHL, Zapier, n8n, webhooks and APIs orchestrated into resilient, observable pipelines.",
-  },
-  {
-    title: "Operational QA",
-    copy: "Debugging, tracing and documenting automations so ops leaders can trust the system at scale.",
+    title: "Launch-ready playbooks",
+    copy: "Documentation, routing rules and safety nets so operators know exactly what is live.",
   },
 ];
 
-const strengths = [
-  "Rapid prototyping with clear guardrails",
-  "Production‑grade voice + chat agent rollouts",
-  "Data hygiene, enrichment and handoff rules",
-  "Hands‑on training so teams actually adopt the tools",
+const highlights = [
+  "Blueprints for intake, routing and follow-ups",
+  "Production-grade AI experiences ready to demo",
+  "Data hygiene baked into every flow",
+  "Rapid iteration without losing governance",
 ];
 
 /**
- * Experience slide summarises your professional capabilities and strengths.
+ * Experience slide reframed as a project overview to match the hero layout.
  */
 export default function Experience() {
   return (
-    <Section id="experience" className="bg-transparent items-start">
-      <div className="w-full max-w-6xl px-6 py-10 md:py-12">
-        <div className="grid items-start gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-6">
-            <div className="space-y-2">
-              <p className="text-xs uppercase tracking-[0.3em] text-slate-300">What I build</p>
-              <h2 className="font-display text-4xl font-semibold text-white">Experience Overview</h2>
-              <p className="text-base leading-relaxed text-slate-200/80">
-                Systems that capture, route and resolve. The focus is dependable delivery—full revenue engines or targeted
-                AI workflows tuned to the team using them.
-              </p>
-            </div>
+    <Section id="experience" className="relative isolate overflow-hidden bg-ink" wrap={false}>
+      <div className="absolute inset-0 -z-10 bg-hero-grid opacity-60" aria-hidden />
+      <div
+        className="absolute inset-0 -z-10 bg-gradient-to-br from-white/5 via-transparent to-black/60"
+        aria-hidden
+      />
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-16 lg:py-20">
+        <div className="flex flex-col gap-4 text-left">
+          <div className="flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-slate-300">
+            <span className="h-px w-10 bg-white/30" aria-hidden />
+            Project overview
+          </div>
+          <div className="space-y-3">
+            <h2 className="max-w-4xl font-display text-4xl leading-tight text-white sm:text-5xl">
+              Systems ready to demo or deploy
+            </h2>
+            <p className="max-w-3xl text-lg text-slate-200">
+              The same scaffold as my hero: clear copy, guided CTAs and instantly usable demos. Everything here is mapped to
+              the workflows I ship for operators and revenue teams.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3 text-sm text-slate-200">
+            {["Voice AI", "Chat orchestration", "RevOps", "QA + docs", "Data hygiene"].map((item) => (
+              <span key={item} className="pill">
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
 
-            <div className="grid gap-3 sm:grid-cols-2">
-              {capabilities.map((item) => (
-                <motion.div
+        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="glass-card rounded-2xl border border-white/5 bg-white/5 p-6 shadow-xl backdrop-blur">
+            <div className="flex items-center justify-between gap-3">
+              <div className="space-y-1">
+                <p className="text-xs uppercase tracking-[0.25em] text-slate-300">Build tracks</p>
+                <h3 className="text-2xl font-semibold text-white">What ships with each project</h3>
+              </div>
+              <span className="rounded-full bg-highlight/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-highlight">
+                Live
+              </span>
+            </div>
+            <div className="mt-5 space-y-4">
+              {capabilityRows.map((item) => (
+                <div
                   key={item.title}
-                  whileHover={{ y: -4, scale: 1.01 }}
-                  className="glass-card h-full rounded-2xl border border-white/5 bg-white/5 p-4 shadow-xl backdrop-blur"
+                  className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/5 p-4 text-sm text-slate-200/90"
                 >
-                  <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-200/80">{item.copy}</p>
-                </motion.div>
+                  <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-highlight/25 text-base text-white">
+                    ↺
+                  </span>
+                  <div>
+                    <p className="font-semibold text-white">{item.title}</p>
+                    <p className="mt-1 leading-relaxed">{item.copy}</p>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
 
-          <div className="glass-card flex h-full flex-col gap-4 rounded-2xl border border-white/5 bg-gradient-to-r from-white/5 via-white/5 to-highlight/10 p-6 shadow-xl backdrop-blur">
+          <motion.div
+            whileHover={{ y: -4 }}
+            className="glass-card flex flex-col gap-4 rounded-2xl border border-white/5 bg-gradient-to-br from-highlight/15 via-white/5 to-accent/10 p-6 shadow-xl backdrop-blur"
+          >
             <div className="flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-slate-200">
-              <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_0_6px_rgba(16,185,129,0.18)]" aria-hidden />
-              Strengths
+              <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_0_6px_rgba(16,185,129,0.2)]" aria-hidden />
+              Highlights
             </div>
             <p className="text-sm leading-relaxed text-slate-200/85">
-              The threads I pull into every engagement—keeping prototypes fast, data clean and adoption frictionless.
+              A quick snapshot before diving into each demo below. Same container as the hero, just tuned for the projects.
             </p>
-            <div className="grid gap-3 md:grid-cols-1">
-              {strengths.map((item) => (
+            <div className="grid gap-3">
+              {highlights.map((item) => (
                 <div
                   key={item}
-                  className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/5 p-4 text-sm text-slate-200/85"
+                  className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/10 p-3 text-sm text-slate-100"
                 >
-                  <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-highlight/30 text-sm text-white">
-                    ✓
+                  <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/20 text-sm text-white">
+                    •
                   </span>
                   <p className="leading-relaxed">{item}</p>
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </Section>
