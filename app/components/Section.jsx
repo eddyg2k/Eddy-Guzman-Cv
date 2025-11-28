@@ -19,7 +19,7 @@ export default function Section({
   return (
     <motion.section
       id={id}
-      className={`snap-start relative h-screen isolate flex items-center justify-center ${className}`}
+      className={`snap-start relative min-h-screen isolate flex items-center justify-center ${className}`}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.35 }}
