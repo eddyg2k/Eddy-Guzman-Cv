@@ -42,7 +42,7 @@ export default function ProjectElemental() {
         />
       </motion.div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-16 sm:px-10 lg:px-16 lg:py-20">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 pt-12 pb-20 sm:px-10 lg:px-16 lg:pt-14 lg:pb-24">
         <div className="flex flex-col gap-4 text-left">
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-slate-300">
             <span className="h-px w-10 bg-white/30" aria-hidden />
@@ -66,8 +66,8 @@ export default function ProjectElemental() {
           </div>
         </div>
 
-        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="space-y-6">
+        <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="space-y-5">
             <div className="flex flex-wrap items-center gap-4">
               <a
                 href="https://elemental-english-web-app.vercel.app/landing"
@@ -99,7 +99,7 @@ export default function ProjectElemental() {
             whileHover={{ scale: 1.01 }}
             className="relative overflow-hidden rounded-3xl border border-white/10 bg-black/70 shadow-[0_30px_90px_rgba(0,0,0,0.45)]"
           >
-            <div className="relative aspect-[4/3] w-full">
+            <div className="relative aspect-[16/10] w-full">
               <iframe
                 src="https://elemental-english-web-app.vercel.app/landing"
                 title="Elemental English landing"

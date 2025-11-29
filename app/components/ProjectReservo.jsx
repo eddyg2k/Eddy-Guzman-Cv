@@ -42,7 +42,7 @@ export default function ProjectReservo() {
         />
       </motion.div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-16 sm:px-10 lg:px-16 lg:py-20">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 pt-12 pb-20 sm:px-10 lg:px-16 lg:pt-14 lg:pb-24">
         <div className="flex flex-col gap-4 text-left">
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-slate-300">
             <span className="h-px w-10 bg-white/30" aria-hidden />
@@ -64,10 +64,10 @@ export default function ProjectReservo() {
           </div>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
           <motion.div
             whileHover={{ y: -4 }}
-            className="glass-card rounded-2xl border border-white/5 bg-gradient-to-br from-highlight/15 via-white/5 to-accent/10 p-6 shadow-xl backdrop-blur"
+            className="glass-card rounded-2xl border border-white/5 bg-gradient-to-br from-highlight/15 via-white/5 to-accent/10 p-5 shadow-xl backdrop-blur"
           >
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <span className="inline-flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 py-2 text-sm text-slate-200/80">
@@ -94,7 +94,7 @@ export default function ProjectReservo() {
                 are delayed in this demo, but N8N automation is available for reservation workflows.
               </p>
             </div>
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
               {highlights.map((item) => (
                 <div
                   key={item}
@@ -109,7 +109,7 @@ export default function ProjectReservo() {
 
           <motion.div
             whileHover={{ y: -4 }}
-            className="glass-card flex flex-col justify-between rounded-2xl border border-white/5 bg-white/5 p-6 shadow-xl backdrop-blur"
+            className="glass-card flex flex-col justify-between rounded-2xl border border-white/5 bg-white/5 p-5 shadow-xl backdrop-blur"
           >
             <div className="space-y-3">
               <p className="text-xs uppercase tracking-[0.25em] text-slate-300">Layout fit</p>
