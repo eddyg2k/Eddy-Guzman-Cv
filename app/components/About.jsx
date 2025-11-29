@@ -10,7 +10,7 @@ export default function About() {
   return (
     <Section id="about" wrap={false} className="relative overflow-hidden bg-gradient-to-b from-[#0a0c11] via-[#0f1220] to-black">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(108,99,255,0.12),transparent_25%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.08),transparent_20%),radial-gradient(circle_at_70%_75%,rgba(255,115,188,0.1),transparent_22%)] opacity-90" />
-      <div className="relative z-10 mx-auto flex h-full w-full max-w-5xl flex-col justify-center gap-10 px-6 py-14 sm:px-10 lg:max-w-6xl lg:px-14">
+      <div className="relative z-10 mx-auto flex h-full w-full max-w-4xl flex-col justify-center gap-10 px-6 py-14 sm:px-8 lg:max-w-5xl lg:px-12">
         <div className="flex flex-col gap-3">
           <p className="text-xs uppercase tracking-[0.3em] text-slate-300/80">About</p>
           <h2 className="font-display text-3xl text-white md:text-4xl">Who am I?</h2>
