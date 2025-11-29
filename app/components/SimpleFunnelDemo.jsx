@@ -18,7 +18,7 @@ export default function SimpleFunnelDemo() {
             <p className="text-xs uppercase tracking-[0.3em] text-slate-300">Demos</p>
             <h2 className="font-display text-4xl font-semibold text-white">Demo Videos</h2>
             <p className="text-base text-slate-200/85">
-              Quick walkthroughs that mirror the other video sections—open, watch, and close without layout shifts.
+              Quick walkthroughs that mirror the other video sections—each one plays inline so you can watch without extra clicks.
             </p>
           </div>
           <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-slate-200/80">
@@ -33,7 +33,7 @@ export default function SimpleFunnelDemo() {
         <LoomVideo
           url="https://www.loom.com/embed/719875201ca44517a9089ffdd8830237"
           title="Simple Funnel Demo"
-          description="A lean funnel that scales without added tech debt—modal playback keeps the page tidy."
+          description="A lean funnel that scales without added tech debt—plays inline so the story stays on the page."
         />
       </div>
     </Section>

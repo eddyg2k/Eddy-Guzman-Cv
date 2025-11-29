@@ -1,117 +1,50 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 /**
- * LoomVideo renders a preview card that defers loading the iframe until the
- * viewer opens it. This speeds up initial page load while keeping a polished
- * modal experience for playback.
+ * LoomVideo now renders the video inline so the demo is always visible without
+ * opening a modal. This keeps the section content front and center while
+ * preserving the same animated entrance.
  */
 export default function LoomVideo({ url, title, description }) {
-  const [open, setOpen] = useState(false);
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    if (open) {
-      setReady(true);
-    }
-  }, [open]);
-
-  useEffect(() => {
-    const handleKey = (event) => {
-      if (event.key === "Escape") setOpen(false);
-    };
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, []);
-
   return (
-    <>
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.35 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="glass-card relative overflow-hidden rounded-2xl border border-white/5 bg-white/5 p-6 shadow-2xl"
-      >
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div className="space-y-2">
-            <p className="text-xs uppercase tracking-[0.3em] text-slate-300">Recorded Demo</p>
-            <h4 className="text-xl font-semibold text-white">{title}</h4>
-            {description ? <p className="text-sm text-slate-200/80">{description}</p> : null}
-          </div>
-          <div className="flex items-center gap-3 text-sm text-slate-200/90">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2">
-              <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_0_6px_rgba(16,185,129,0.18)]" aria-hidden />
-              Optimized streaming
-            </span>
-            <button
-              type="button"
-              onClick={() => setOpen(true)}
-              className="btn-primary"
-              aria-label={`Play ${title}`}
-            >
-              <span aria-hidden className="text-lg leading-none">▶</span>
-              Watch now
-            </button>
-          </div>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.35 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="glass-card relative overflow-hidden rounded-2xl border border-white/5 bg-white/5 p-6 shadow-2xl"
+    >
+      <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+        <div className="space-y-2">
+          <p className="text-xs uppercase tracking-[0.3em] text-slate-300">Recorded Demo</p>
+          <h4 className="text-xl font-semibold text-white">{title}</h4>
+          {description ? <p className="text-sm text-slate-200/80">{description}</p> : null}
         </div>
-        <div className="mt-4 flex items-center gap-3 text-[0.85rem] text-slate-200/70">
-          <span className="h-10 w-10 rounded-xl bg-gradient-to-br from-highlight/20 to-white/5" aria-hidden />
-          <p className="leading-relaxed">
-            Videos open in a modal to keep the page snappy. Click “Watch now” to stream instantly.
-          </p>
+        <div className="flex items-center gap-3 text-sm text-slate-200/90">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2">
+            <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_0_6px_rgba(16,185,129,0.18)]" aria-hidden />
+            Plays inline
+          </span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-[0.85rem]">
+            No pop‑ups needed
+          </span>
         </div>
-      </motion.div>
+      </div>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            key="backdrop"
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-          <motion.div
-            key="dialog"
-            role="dialog"
-            aria-modal="true"
-            className="relative w-[96vw] max-w-5xl overflow-hidden rounded-2xl border border-white/10 bg-slate-900/90 shadow-2xl md:max-w-6xl"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.96 }}
-            transition={{ duration: 0.18 }}
-          >
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                className="group absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
-                aria-label="Close video"
-              >
-                <span className="text-lg leading-none group-hover:scale-105">×</span>
-              </button>
-              <div className="w-full max-h-[78vh] bg-black/70">
-                {ready ? (
-                  <iframe
-                    src={url}
-                    title={title}
-                    allow="autoplay; encrypted-media"
-                    allowFullScreen
-                    loading="lazy"
-                    className="h-[70vh] w-full sm:h-[72vh] lg:h-[74vh]"
-                  />
-                ) : (
-                  <div className="flex h-full w-full items-center justify-center text-sm text-slate-200/80">
-                    Preparing stream…
-                  </div>
-                )}
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+      <div className="mt-5 overflow-hidden rounded-xl border border-white/10 bg-black/40 shadow-inner">
+        <div className="relative w-full pb-[56.25%]">
+          <iframe
+            src={url}
+            title={title}
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            loading="lazy"
+            className="absolute inset-0 h-full w-full"
+          />
+        </div>
+      </div>
+    </motion.div>
   );
 }
