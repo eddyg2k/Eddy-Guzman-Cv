@@ -1,5 +1,6 @@
 "use client";
 
+import EmbedSlide from "../components/EmbedSlide";
 import Slide from "../components/Slide";
 
 export default function ReservoDemo() {
@@ -22,12 +23,10 @@ export default function ReservoDemo() {
     >
       <div className="grid gap-4 text-base sm:text-lg">
         <p>Reservo’s AI host handles the full conversational flow end-to-end.</p>
-        <div className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 p-4 shadow-inner">
-          <div className="aspect-video w-full rounded-xl bg-gradient-to-br from-blue-500/40 via-slate-800 to-indigo-600/40" />
-          <p className="mt-3 text-sm text-slate-200/80">
-            Embedded experience placeholder — live demo mirrors the production system.
-          </p>
-        </div>
+        <EmbedSlide url="https://reservo.live" title="Reservo live demo" loadingMessage="Loading Reservo demo..." />
+        <p className="text-sm text-slate-200/80">
+          Embedded experience mirrors the production host for live ordering and reservations.
+        </p>
         <ul className="grid gap-2 text-slate-100/90">
           <li className="flex items-start gap-3">
             <span className="mt-1 h-2 w-2 rounded-full bg-sky-300" />

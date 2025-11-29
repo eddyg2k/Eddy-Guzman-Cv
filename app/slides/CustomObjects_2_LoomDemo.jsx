@@ -1,5 +1,6 @@
 "use client";
 
+import EmbedSlide from "../components/EmbedSlide";
 import Slide from "../components/Slide";
 
 export default function CustomObjectsLoomDemo() {
@@ -18,16 +19,11 @@ export default function CustomObjectsLoomDemo() {
     >
       <div className="grid gap-4 text-base sm:text-lg">
         <p>Demonstrates why relational data structures make automations reliable.</p>
-        <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-inner">
-          <div className="aspect-video">
-            <iframe
-              src="https://www.loom.com/embed/c53ea554caaf4aaf81f1b01c50ff0c0c"
-              allowFullScreen
-              className="h-full w-full"
-              title="Custom objects Loom demo"
-            />
-          </div>
-        </div>
+        <EmbedSlide
+          url="https://www.loom.com/embed/c53ea554caaf4aaf81f1b01c50ff0c0c"
+          title="Custom objects Loom demo"
+          loadingMessage="Loading custom objects walkthrough..."
+        />
         <ul className="grid gap-2 text-slate-100/90">
           <li className="flex items-start gap-3">
             <span className="mt-1 h-2 w-2 rounded-full bg-amber-300" />
