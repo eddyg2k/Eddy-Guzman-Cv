@@ -63,7 +63,8 @@ export default function About() {
               Meet the custom GPT
             </a>
             <p className="text-sm text-slate-200">
-              Tell it where to send your recap, then probe the systems, ops and automations I ship.
+              Tell it where to send your recap, then probe the systems, ops and automations I ship. Come back to this CV when
+              you’re done so you don’t miss the rest.
             </p>
           </motion.div>
         </div>
