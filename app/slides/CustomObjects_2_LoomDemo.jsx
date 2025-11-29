@@ -22,8 +22,9 @@ export default function CustomObjectsLoomDemo() {
           <div className="aspect-video">
             <iframe
               src="https://www.loom.com/embed/c53ea554caaf4aaf81f1b01c50ff0c0c"
+              allow="camera; microphone; autoplay; encrypted-media; picture-in-picture"
               allowFullScreen
-              className="h-full w-full"
+              className="h-full w-full min-h-[320px]"
               title="Custom objects Loom demo"
             />
           </div>

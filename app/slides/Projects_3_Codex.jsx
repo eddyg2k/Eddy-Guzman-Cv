@@ -11,7 +11,7 @@ export default function ProjectsCodex() {
       accent="from-purple-400/70 via-fuchsia-400/60 to-pink-400/50"
       actions={
         <a
-          href="https://eddy-guzman-cv-git-codex-explain-cb1202-eddys-projects-3ec958a4.vercel.app/"
+          href="https://codex-explain.vercel.app"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
