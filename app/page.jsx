@@ -19,8 +19,6 @@ export default function HomePage() {
       <IntroAnimation />
       {/* Main hero section: leave as is */}
       <Hero />
-      {/* Who am I */}
-      <About />
       {/* Experience overview */}
       <Experience />
       {/* Projects */}
@@ -32,6 +30,8 @@ export default function HomePage() {
       <CustomObjectsDemo />
       {/* Bots and educational apps */}
       <DiscordBots />
+      {/* Who am I */}
+      <About />
       {/* Contact */}
       <Contact />
       {/* Thank you (last slide, stops scroll) */}
