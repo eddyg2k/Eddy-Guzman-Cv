@@ -10,14 +10,24 @@ export default function ProjectsDeckEngine() {
       subtitle="Non-scrolling cinematic UX for storytelling"
       accent="from-blue-400/70 via-indigo-500/60 to-slate-500/50"
       actions={
-        <a
-          href="https://reservo.live"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-        >
-          See the inspiration
-        </a>
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="https://eddy-guzman-cv.vercel.app"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            View deployed deck
+          </a>
+          <a
+            href="https://github.com/cb1202/Eddy-Guzman-Cv"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-white/10 px-5 py-3 text-sm font-semibold text-white shadow-lg ring-1 ring-white/40 transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            View repo
+          </a>
+        </div>
       }
     >
       <div className="grid gap-4 text-base sm:text-lg">

@@ -11,7 +11,7 @@ export default function ProjectsLandingPage() {
       accent="from-teal-400/70 via-cyan-400/60 to-blue-400/50"
       actions={
         <a
-          href="https://eddy-guzman-cv-git-codex-explain-cb1202-eddys-projects-3ec958a4.vercel.app/"
+          href="https://landing-page-scaffold.vercel.app"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
