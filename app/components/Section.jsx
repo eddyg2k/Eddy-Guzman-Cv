@@ -29,7 +29,7 @@ export default function Section({
     >
       {wrap ? (
         <div
-          className={`relative z-20 mx-auto flex w-full max-w-4xl flex-col gap-6 px-6 pt-10 pb-16 sm:px-10 sm:pt-12 sm:pb-20 md:max-w-3xl lg:max-w-4xl lg:px-12 lg:pt-14 lg:pb-24 ${shellClassName}`}
+          className={`relative z-20 mx-auto flex h-full w-full max-w-4xl flex-col justify-start gap-10 px-6 pt-10 pb-16 sm:px-8 sm:pt-12 sm:pb-20 lg:max-w-5xl lg:px-12 ${shellClassName}`}
         >
           {children}
         </div>

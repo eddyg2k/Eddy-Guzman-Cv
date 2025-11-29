@@ -36,7 +36,7 @@ export default function Experience() {
         className="absolute inset-0 -z-10 bg-gradient-to-br from-white/5 via-transparent to-black/60"
         aria-hidden
       />
-      <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col gap-10 px-6 pt-12 pb-16 sm:px-8 sm:pt-14 sm:pb-20 lg:max-w-5xl lg:px-12 lg:pt-16 lg:pb-24">
+      <div className="relative z-10 mx-auto flex h-full w-full max-w-4xl flex-col justify-start gap-10 px-6 pt-10 pb-16 sm:px-8 sm:pt-12 sm:pb-20 lg:max-w-5xl lg:px-12">
         <div className="flex flex-col gap-4 text-left">
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-slate-300">
             <span className="h-px w-10 bg-white/30" aria-hidden />
