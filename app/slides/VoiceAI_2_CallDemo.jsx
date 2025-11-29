@@ -1,5 +1,6 @@
 "use client";
 
+import EmbedSlide from "../components/EmbedSlide";
 import Slide from "../components/Slide";
 
 export default function VoiceAICallDemo() {
@@ -29,17 +30,11 @@ export default function VoiceAICallDemo() {
     >
       <div className="grid gap-4 text-base sm:text-lg">
         <p>Shows how the agent handles intake, scheduling, and confirmation.</p>
-        <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-inner">
-          <div className="aspect-video w-full">
-            <iframe
-              src="https://www.loom.com/embed/8a043524e6a940c7b64c06e32ac6329a"
-              allow="camera; microphone; autoplay; encrypted-media; picture-in-picture"
-              allowFullScreen
-              className="h-full w-full min-h-[320px]"
-              title="AI voice agent call demo"
-            />
-          </div>
-        </div>
+        <EmbedSlide
+          url="https://www.loom.com/embed/8a043524e6a940c7b64c06e32ac6329a"
+          title="AI voice agent call demo"
+          loadingMessage="Loading Loom call demo..."
+        />
         <ul className="grid gap-2 text-slate-100/90">
           <li className="flex items-start gap-3">
             <span className="mt-1 h-2 w-2 rounded-full bg-orange-300" />
