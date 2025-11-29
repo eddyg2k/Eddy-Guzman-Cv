@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import Section from "./Section";
 
 const highlights = [
-  "24/7 inbound calls with CRM sync",
-  "Websocket audio for near‑zero latency",
-  "Memory for repeat callers and preferences",
-  "Bookings, confirmations and follow‑ups handled automatically",
+  "24/7 calls with CRM sync",
+  "Websocket audio, low latency",
+  "Memory for repeat callers",
+  "Bookings and confirmations handled",
 ];
 
 /**
@@ -51,8 +51,7 @@ export default function ProjectReservo() {
           <div className="space-y-3">
             <h2 className="max-w-4xl font-display text-4xl leading-tight text-white sm:text-5xl">Project: Reservo</h2>
             <p className="max-w-3xl text-lg text-slate-200">
-              A hero-style presentation for the production voice agent built for restaurants and service teams. Calls stream
-              through websockets for crisp, fast turn-taking.
+              Voice AI for restaurants and service teams. Websocket calls keep turn-taking crisp.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 text-sm text-slate-200">
@@ -86,12 +85,12 @@ export default function ProjectReservo() {
             </div>
             <div className="mt-4 space-y-2 text-base leading-relaxed text-slate-200/90">
               <p>
-                Reservo handles calls end-to-end: gathering context, booking, updating CRMs and delivering confirmations. The
-                embedded look mirrors the hero while keeping the demo link front and center.
+                Reservo gathers context, books, updates CRMs and sends confirmations in one flow. The demo shell mirrors the
+                hero while keeping the CTA visible.
               </p>
               <p>
-                Built for Spanish-speaking restaurants, it requests microphone access for live conversations. Backend actions
-                are delayed in this demo, but N8N automation is available for reservation workflows.
+                Built for Spanish-first restaurants, it asks for the mic right away. Backend actions lag in this preview, but
+                N8N automation stays ready for reservations.
               </p>
             </div>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -115,8 +114,7 @@ export default function ProjectReservo() {
               <p className="text-xs uppercase tracking-[0.25em] text-slate-300">Layout fit</p>
               <h3 className="text-2xl font-semibold text-white">Same shell as the hero</h3>
               <p className="text-sm leading-relaxed text-slate-200/85">
-                Copy and structure have been adapted to the hero container, so the Reservo story reads like the top of the page
-                while keeping the CTA and status block intact.
+                Trimmed copy fits the hero container so the story stays above the fold with the CTA and status block intact.
               </p>
             </div>
             <div className="mt-4 flex flex-wrap gap-2 text-xs uppercase tracking-[0.2em] text-slate-200">

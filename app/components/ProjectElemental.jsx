@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import Section from "./Section";
 
 const pillars = [
-  "Logic‑first ESL curriculum with bilingual mental models",
-  "Scroll‑triggered storytelling and interactive hero",
-  "Clusters and first principles instead of rote grammar",
-  "Built as a UX/learning scaffold—ready for expansion",
+  "Logic‑first ESL with bilingual anchors",
+  "Scroll story with an interactive hero",
+  "Clusters over rote grammar",
+  "UX scaffold ready to expand",
 ];
 
 /**
@@ -53,8 +53,8 @@ export default function ProjectElemental() {
               Project: Elemental English
             </h2>
             <p className="max-w-3xl text-lg text-slate-200">
-              The landing, curriculum map and teaching method now share the same hero container. The copy is tightened to fit
-              this frame while keeping the bilingual, logic-first angle front and center.
+              The landing, map and method share the hero container with tightened copy that keeps the bilingual, logic-first
+              angle in view.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 text-sm text-slate-200">
@@ -82,8 +82,7 @@ export default function ProjectElemental() {
               </a>
             </div>
             <p className="max-w-3xl text-base leading-relaxed text-slate-200/90">
-              Same vibe as the hero: uncluttered, fast and focused on the CTA. The iframe stretches edge-to-edge so the
-              landing and curriculum map feel like a full-screen experience instead of a card.
+              Uncluttered, fast and CTA-first. The iframe runs edge-to-edge so the landing and map feel nearly full screen.
             </p>
             <div className="space-y-3 text-sm text-slate-100/95">
               {pillars.map((item) => (
