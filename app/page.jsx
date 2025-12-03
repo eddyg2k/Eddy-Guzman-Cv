@@ -38,21 +38,21 @@ const backgrounds = [
 ];
 
 const slides = [
-  { id: "hero", component: Hero, background: backgrounds[0] },
-  { id: "reservo-what", component: ReservoWhat, background: backgrounds[1] },
-  { id: "reservo-why", component: ReservoWhy, background: backgrounds[2] },
-  { id: "reservo-demo", component: ReservoDemo, background: backgrounds[3] },
-  { id: "voiceai-overview", component: VoiceAIOverview, background: backgrounds[4] },
-  { id: "voiceai-call", component: VoiceAICallDemo, background: backgrounds[5] },
-  { id: "voiceai-features", component: VoiceAIFeatures, background: backgrounds[6] },
-  { id: "custom-objects-explanation", component: CustomObjectsExplanation, background: backgrounds[7] },
-  { id: "custom-objects-loom", component: CustomObjectsLoomDemo, background: backgrounds[8] },
-  { id: "projects-elemental", component: ProjectsElemental, background: backgrounds[9] },
-  { id: "discord-bots", component: DiscordBots, background: backgrounds[10] },
-  { id: "elevenlabs", component: ElevenLabsSlide, background: backgrounds[11] },
-  { id: "educational-apps", component: EducationalApps, background: backgrounds[12] },
-  { id: "thank-you", component: ThankYou, background: backgrounds[13] },
-  { id: "contact", component: Contact, background: backgrounds[14] },
+  { id: "hero", component: Hero, background: backgrounds[0], transitionStyle: "tilt-in" },
+  { id: "reservo-what", component: ReservoWhat, background: backgrounds[1], transitionStyle: "parallax-drift" },
+  { id: "reservo-why", component: ReservoWhy, background: backgrounds[2], transitionStyle: "split-reveal" },
+  { id: "reservo-demo", component: ReservoDemo, background: backgrounds[3], transitionStyle: "tilt-in" },
+  { id: "voiceai-overview", component: VoiceAIOverview, background: backgrounds[4], transitionStyle: "parallax-drift" },
+  { id: "voiceai-call", component: VoiceAICallDemo, background: backgrounds[5], transitionStyle: "split-reveal" },
+  { id: "voiceai-features", component: VoiceAIFeatures, background: backgrounds[6], transitionStyle: "tilt-in" },
+  { id: "custom-objects-explanation", component: CustomObjectsExplanation, background: backgrounds[7], transitionStyle: "parallax-drift" },
+  { id: "custom-objects-loom", component: CustomObjectsLoomDemo, background: backgrounds[8], transitionStyle: "split-reveal" },
+  { id: "projects-elemental", component: ProjectsElemental, background: backgrounds[9], transitionStyle: "tilt-in" },
+  { id: "discord-bots", component: DiscordBots, background: backgrounds[10], transitionStyle: "parallax-drift" },
+  { id: "elevenlabs", component: ElevenLabsSlide, background: backgrounds[11], transitionStyle: "split-reveal" },
+  { id: "educational-apps", component: EducationalApps, background: backgrounds[12], transitionStyle: "tilt-in" },
+  { id: "thank-you", component: ThankYou, background: backgrounds[13], transitionStyle: "parallax-drift" },
+  { id: "contact", component: Contact, background: backgrounds[14], transitionStyle: "split-reveal" },
 ];
 
 export default function HomePage() {
