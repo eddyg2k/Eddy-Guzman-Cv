@@ -8,7 +8,7 @@ export default function CustomObjectsExplanation() {
       eyebrow="Custom Objects"
       title="Why they matter"
       subtitle="Organizing contractor data for multi-relationship workflows"
-      accent="from-amber-400/70 via-orange-400/60 to-rose-400/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
         <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-100/90 backdrop-blur">
           <p className="font-semibold text-white">Impact</p>

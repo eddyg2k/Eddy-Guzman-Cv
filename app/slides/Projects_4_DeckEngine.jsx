@@ -9,7 +9,7 @@ export default function ProjectsDeckEngine() {
       eyebrow="Projects"
       title="CV Deck Engine"
       subtitle="Non-scrolling cinematic UX for storytelling"
-      accent="from-blue-400/70 via-indigo-500/60 to-slate-500/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
         <div className="flex flex-wrap items-center gap-3">
           <a

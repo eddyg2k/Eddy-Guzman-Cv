@@ -8,7 +8,7 @@ export default function Intro() {
       eyebrow="Perspectivity"
       title="Welcome"
       subtitle="A cinematic, non-scrolling CV deck experience"
-      accent="from-cyan-400/70 via-emerald-400/50 to-sky-500/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
         <div className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
           <p className="text-sm uppercase tracking-[0.3em] text-white/60">Auto advance</p>

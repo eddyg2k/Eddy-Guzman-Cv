@@ -8,7 +8,7 @@ export default function SkillsFrontend() {
       eyebrow="Skills"
       title="Frontend engineering"
       subtitle="Cinematic UX with Tailwind, Next.js, and smooth transitions"
-      accent="from-indigo-400/70 via-blue-500/60 to-cyan-400/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
     >
       <ul className="grid gap-3 text-base sm:text-lg">
         <li className="flex items-start gap-3">

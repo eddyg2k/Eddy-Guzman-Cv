@@ -9,7 +9,7 @@ export default function ProjectsElemental() {
       eyebrow="Projects"
       title="Elemental English Web App"
       subtitle="Language-learning landing that feeds AI lesson flows"
-      accent="from-cyan-400/70 via-blue-500/60 to-indigo-500/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
         <a
           href="https://elemental-english-web-app.vercel.app/landing"

@@ -8,7 +8,7 @@ export default function Hero() {
       eyebrow="Eddy Guzman"
       title="Automation Engineer & Voice AI Builder"
       subtitle="Designing production-ready AI systems, cinematic experiences, and operational workflows"
-      accent="from-indigo-400/70 via-purple-500/60 to-fuchsia-500/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
         <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
           <p className="text-sm font-semibold text-white">Deck format</p>

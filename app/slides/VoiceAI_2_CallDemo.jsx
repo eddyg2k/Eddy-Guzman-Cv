@@ -9,7 +9,7 @@ export default function VoiceAICallDemo() {
       eyebrow="AI Voice Agents"
       title="Call demo summary"
       subtitle="Window cleaning scheduling workflow"
-      accent="from-pink-400/70 via-rose-400/60 to-orange-400/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
         <div className="flex flex-col gap-4">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-100/90 backdrop-blur">

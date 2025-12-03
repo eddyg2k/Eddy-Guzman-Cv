@@ -8,7 +8,7 @@ export default function Contact() {
       eyebrow="Contact"
       title="Let’s build together"
       subtitle="Voice AI, automation, and cinematic UX for Perspectivity’s clients"
-      accent="from-sky-400/70 via-indigo-500/60 to-purple-500/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
         <div className="flex flex-col gap-3">
           <a

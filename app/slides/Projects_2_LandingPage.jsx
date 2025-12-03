@@ -9,7 +9,7 @@ export default function ProjectsLandingPage() {
       eyebrow="Projects"
       title="Landing Page Scaffold"
       subtitle="Conversion-focused scaffolds for fast launches"
-      accent="from-teal-400/70 via-cyan-400/60 to-blue-400/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
         <a
           href="https://landing-page-scaffold.vercel.app"

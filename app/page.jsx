@@ -20,21 +20,21 @@ import ThankYou from "./slides/ThankYou";
 import Contact from "./slides/Contact";
 
 const backgrounds = [
-  "radial-gradient(circle at 15% 20%, rgba(110,243,255,0.35), transparent 35%), radial-gradient(circle at 80% 10%, rgba(126,122,255,0.32), transparent 32%), linear-gradient(135deg, #04121c 0%, #0a1220 55%, #101428 100%)",
-  "radial-gradient(circle at 20% 20%, rgba(144,122,255,0.35), transparent 36%), radial-gradient(circle at 80% 0%, rgba(255,128,234,0.32), transparent 35%), linear-gradient(120deg, #0c0a1a 0%, #0f1124 60%, #1a1230 100%)",
-  "radial-gradient(circle at 15% 30%, rgba(59,222,179,0.32), transparent 32%), radial-gradient(circle at 85% 10%, rgba(81,207,255,0.32), transparent 30%), linear-gradient(135deg, #041210 0%, #07171c 60%, #0c1f28 100%)",
-  "radial-gradient(circle at 20% 35%, rgba(88,255,177,0.3), transparent 32%), radial-gradient(circle at 75% 10%, rgba(171,255,99,0.3), transparent 30%), linear-gradient(135deg, #0b1b12 0%, #0b1f17 55%, #0d1f1c 100%)",
-  "radial-gradient(circle at 10% 20%, rgba(86,178,255,0.35), transparent 35%), radial-gradient(circle at 80% 15%, rgba(118,137,255,0.32), transparent 32%), linear-gradient(135deg, #081223 0%, #0a1428 55%, #0d162f 100%)",
-  "radial-gradient(circle at 15% 25%, rgba(247,121,242,0.32), transparent 32%), radial-gradient(circle at 80% 10%, rgba(141,137,255,0.32), transparent 30%), linear-gradient(135deg, #12081a 0%, #170c22 55%, #1d1230 100%)",
-  "radial-gradient(circle at 20% 30%, rgba(255,180,162,0.28), transparent 34%), radial-gradient(circle at 80% 12%, rgba(255,140,102,0.32), transparent 32%), linear-gradient(135deg, #1c0a14 0%, #241018 55%, #2c1522 100%)",
-  "radial-gradient(circle at 15% 25%, rgba(147,197,253,0.28), transparent 34%), radial-gradient(circle at 78% 8%, rgba(129,140,248,0.3), transparent 32%), linear-gradient(135deg, #0c0c24 0%, #0f1230 55%, #0f1836 100%)",
-  "radial-gradient(circle at 18% 24%, rgba(255,198,115,0.32), transparent 34%), radial-gradient(circle at 75% 12%, rgba(255,153,102,0.32), transparent 32%), linear-gradient(135deg, #1c0d08 0%, #241410 55%, #2c1a16 100%)",
-  "radial-gradient(circle at 15% 22%, rgba(255,176,122,0.32), transparent 34%), radial-gradient(circle at 80% 10%, rgba(255,214,102,0.28), transparent 32%), linear-gradient(135deg, #231206 0%, #2c170b 55%, #32200f 100%)",
-  "radial-gradient(circle at 18% 26%, rgba(110,196,255,0.32), transparent 34%), radial-gradient(circle at 80% 12%, rgba(126,122,255,0.3), transparent 32%), linear-gradient(135deg, #071320 0%, #0a1726 55%, #0f1c30 100%)",
-  "radial-gradient(circle at 18% 26%, rgba(87,242,203,0.28), transparent 34%), radial-gradient(circle at 78% 8%, rgba(86,190,255,0.3), transparent 32%), linear-gradient(135deg, #07161c 0%, #0a1c24 55%, #0f2430 100%)",
-  "radial-gradient(circle at 20% 24%, rgba(208,128,255,0.32), transparent 34%), radial-gradient(circle at 82% 12%, rgba(255,155,219,0.3), transparent 32%), linear-gradient(135deg, #1a0c1f 0%, #1f1128 55%, #231633 100%)",
-  "radial-gradient(circle at 18% 26%, rgba(124,169,255,0.32), transparent 34%), radial-gradient(circle at 75% 10%, rgba(118,220,255,0.28), transparent 32%), linear-gradient(135deg, #0c101c 0%, #0f1323 55%, #13172b 100%)",
-  "radial-gradient(circle at 18% 24%, rgba(125,255,200,0.32), transparent 34%), radial-gradient(circle at 80% 10%, rgba(102,234,255,0.3), transparent 32%), linear-gradient(135deg, #061412 0%, #0a1b18 55%, #0d221f 100%)",
+  "radial-gradient(circle at 15% 20%, rgba(255,255,255,0.05), transparent 36%), radial-gradient(circle at 80% 10%, rgba(255,255,255,0.04), transparent 32%), linear-gradient(135deg, #050505 0%, #0d0f12 55%, #151820 100%)",
+  "radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05), transparent 36%), radial-gradient(circle at 80% 0%, rgba(255,255,255,0.04), transparent 32%), linear-gradient(135deg, #080809 0%, #101318 55%, #191d25 100%)",
+  "radial-gradient(circle at 15% 30%, rgba(255,255,255,0.06), transparent 34%), radial-gradient(circle at 85% 10%, rgba(255,255,255,0.05), transparent 32%), linear-gradient(135deg, #0b0c0e 0%, #13171d 55%, #1c212b 100%)",
+  "radial-gradient(circle at 20% 35%, rgba(255,255,255,0.06), transparent 34%), radial-gradient(circle at 75% 10%, rgba(255,255,255,0.05), transparent 32%), linear-gradient(135deg, #0d0f12 0%, #161b22 55%, #1f2530 100%)",
+  "radial-gradient(circle at 10% 20%, rgba(255,255,255,0.07), transparent 34%), radial-gradient(circle at 80% 15%, rgba(255,255,255,0.06), transparent 32%), linear-gradient(135deg, #101215 0%, #1a1f27 55%, #232c35 100%)",
+  "radial-gradient(circle at 15% 25%, rgba(255,255,255,0.07), transparent 34%), radial-gradient(circle at 80% 10%, rgba(255,255,255,0.06), transparent 32%), linear-gradient(135deg, #131417 0%, #1d232c 55%, #27323d 100%)",
+  "radial-gradient(circle at 20% 30%, rgba(255,255,255,0.08), transparent 34%), radial-gradient(circle at 80% 12%, rgba(255,255,255,0.07), transparent 32%), linear-gradient(135deg, #15161a 0%, #202731 55%, #2b3441 100%)",
+  "radial-gradient(circle at 15% 25%, rgba(255,255,255,0.08), transparent 34%), radial-gradient(circle at 78% 8%, rgba(255,255,255,0.07), transparent 32%), linear-gradient(135deg, #181a1d 0%, #232c36 55%, #2e3947 100%)",
+  "radial-gradient(circle at 18% 24%, rgba(255,255,255,0.08), transparent 34%), radial-gradient(circle at 75% 12%, rgba(255,255,255,0.07), transparent 32%), linear-gradient(135deg, #1b1d20 0%, #26303a 55%, #323e4c 100%)",
+  "radial-gradient(circle at 15% 22%, rgba(255,255,255,0.09), transparent 34%), radial-gradient(circle at 80% 10%, rgba(255,255,255,0.08), transparent 32%), linear-gradient(135deg, #1e2024 0%, #29333e 55%, #354352 100%)",
+  "radial-gradient(circle at 18% 26%, rgba(255,255,255,0.09), transparent 34%), radial-gradient(circle at 80% 12%, rgba(255,255,255,0.08), transparent 32%), linear-gradient(135deg, #222429 0%, #2d3944 55%, #394a59 100%)",
+  "radial-gradient(circle at 18% 26%, rgba(255,255,255,0.1), transparent 34%), radial-gradient(circle at 78% 8%, rgba(255,255,255,0.09), transparent 32%), linear-gradient(135deg, #26282d 0%, #313f4a 55%, #3d5260 100%)",
+  "radial-gradient(circle at 20% 24%, rgba(255,255,255,0.1), transparent 34%), radial-gradient(circle at 82% 12%, rgba(255,255,255,0.09), transparent 32%), linear-gradient(135deg, #2b2f34 0%, #364553 55%, #455d6c 100%)",
+  "radial-gradient(circle at 18% 26%, rgba(255,255,255,0.12), transparent 34%), radial-gradient(circle at 75% 10%, rgba(255,255,255,0.1), transparent 32%), linear-gradient(135deg, #32373d 0%, #3f4f5e 55%, #516879 100%)",
+  "radial-gradient(circle at 18% 24%, rgba(255,255,255,0.14), transparent 34%), radial-gradient(circle at 80% 10%, rgba(255,255,255,0.12), transparent 32%), linear-gradient(135deg, #3c4248 0%, #5f666f 55%, #c4c7cc 100%)",
 ];
 
 const slides = [

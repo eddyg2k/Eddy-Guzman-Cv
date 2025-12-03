@@ -8,7 +8,7 @@ export default function SkillsTeaching() {
       eyebrow="Skills"
       title="Teaching & language science"
       subtitle="ESL methodology applied to UX clarity and onboarding"
-      accent="from-amber-300/70 via-orange-400/60 to-pink-400/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
     >
       <ul className="grid gap-3 text-base sm:text-lg">
         <li className="flex items-start gap-3">

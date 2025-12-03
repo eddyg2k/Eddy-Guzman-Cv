@@ -8,7 +8,7 @@ export default function DiscordBots() {
       eyebrow="Other capabilities"
       title="Discord bots"
       subtitle="Recepcionista bot, onboarding flows, and category-level automations"
-      accent="from-violet-400/70 via-purple-500/60 to-indigo-500/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
         <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-inner">
           <div className="aspect-video">
