@@ -8,7 +8,7 @@ export default function ElevenLabsSlide() {
       eyebrow="Other capabilities"
       title="ElevenLabs"
       subtitle="Great for content and voices; GHL agents win for workflows"
-      accent="from-rose-400/70 via-orange-400/60 to-amber-400/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
     >
       <ul className="grid gap-3 text-base sm:text-lg">
         <li className="flex items-start gap-3">

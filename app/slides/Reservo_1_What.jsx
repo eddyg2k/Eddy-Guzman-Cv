@@ -8,7 +8,7 @@ export default function ReservoWhat() {
       eyebrow="Reservo"
       title="What it is"
       subtitle="Reservo.live — voice AI for restaurants"
-      accent="from-emerald-400/70 via-cyan-400/60 to-blue-500/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
         <div className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-100/90 backdrop-blur">
           <p className="font-semibold text-white">Core promise</p>

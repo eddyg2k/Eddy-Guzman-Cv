@@ -9,7 +9,7 @@ export default function ReservoDemo() {
       eyebrow="Reservo"
       title="Demo"
       subtitle="Live ordering and reservation experience"
-      accent="from-sky-400/70 via-blue-500/60 to-indigo-500/60"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
         <a
           href="https://reservo.live"

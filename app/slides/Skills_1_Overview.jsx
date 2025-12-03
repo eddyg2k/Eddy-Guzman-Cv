@@ -8,7 +8,7 @@ export default function SkillsOverview() {
       eyebrow="Skills"
       title="General overview"
       subtitle="AI systems, frontend engineering, and operational rigor"
-      accent="from-emerald-300/70 via-cyan-400/60 to-blue-400/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
         <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-100/90 backdrop-blur">
           <p className="font-semibold text-white">Sales + Operations</p>

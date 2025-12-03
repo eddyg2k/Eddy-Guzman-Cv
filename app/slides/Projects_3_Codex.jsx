@@ -9,7 +9,7 @@ export default function ProjectsCodex() {
       eyebrow="Projects"
       title="Codex Development Flow"
       subtitle="Structured build process for AI-forward products"
-      accent="from-purple-400/70 via-fuchsia-400/60 to-pink-400/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
         <a
           href="https://codex-explain.vercel.app"

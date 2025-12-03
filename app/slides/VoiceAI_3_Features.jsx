@@ -8,7 +8,7 @@ export default function VoiceAIFeatures() {
       eyebrow="AI Voice Agents"
       title="Features + superiority"
       subtitle="GHL > ElevenLabs for production automations"
-      accent="from-purple-400/70 via-indigo-500/60 to-blue-500/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
         <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-100/90 backdrop-blur">
           <p className="font-semibold text-white">Feature stack</p>

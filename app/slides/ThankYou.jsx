@@ -8,7 +8,7 @@ export default function ThankYou() {
       eyebrow="Closing"
       title="Thank you"
       subtitle="Appreciate your time exploring this deck"
-      accent="from-emerald-300/70 via-teal-400/60 to-blue-400/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
     >
       <div className="grid gap-3 text-base sm:text-lg">
         <p>Happy to dive deeper into any demo or workflow. The deck keeps the focus on one idea at a time.</p>

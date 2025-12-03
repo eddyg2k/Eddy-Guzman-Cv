@@ -8,7 +8,7 @@ export default function EducationalApps() {
       eyebrow="Other capabilities"
       title="Educational apps"
       subtitle="Tools that teach while they guide"
-      accent="from-teal-300/70 via-blue-400/60 to-indigo-500/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
     >
       <div className="grid gap-3 text-base sm:text-lg">
         <p>Blending ESL pedagogy with product design to make educational tools engaging and clear.</p>

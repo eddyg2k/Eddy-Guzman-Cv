@@ -8,7 +8,7 @@ export default function SkillsAI() {
       eyebrow="Skills"
       title="AI / Automations"
       subtitle="Voice agents, workflow automation, and data-driven triggers"
-      accent="from-teal-400/70 via-emerald-400/60 to-lime-400/50"
+      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
     >
       <ul className="grid gap-3 text-base sm:text-lg">
         <li className="flex items-start gap-3">
