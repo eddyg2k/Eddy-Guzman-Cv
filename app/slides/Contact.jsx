@@ -9,22 +9,17 @@ export default function Contact() {
       title="Let’s build together"
       subtitle="Voice AI, automation, and cinematic UX for Perspectivity’s clients"
       accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
-      actions={
-        <div className="flex flex-col gap-3">
-          <a
-            href="mailto:eduardoguzmanqz@gmail.com"
-            className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-          >
-            Email Eduardo
-          </a>
-          <a
-            href="tel:+19999053013"
-            className="inline-flex items-center justify-center rounded-full border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-1 hover:border-white/60 hover:bg-white/10"
-          >
-            Call 999 905 3013
-          </a>
-        </div>
-      }
+      actions={[
+        {
+          label: "Email Eduardo",
+          href: "mailto:eduardoguzmanqz@gmail.com",
+        },
+        {
+          label: "Call 999 905 3013",
+          href: "tel:+19999053013",
+          variant: "ghost",
+        },
+      ]}
     >
       <div className="grid gap-4 text-base sm:text-lg">
         <p>

@@ -10,23 +10,24 @@ export default function VoiceAICallDemo() {
       title="Call demo summary"
       subtitle="Window cleaning scheduling workflow"
       accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
-      actions={
-        <div className="flex flex-col gap-4">
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-100/90 backdrop-blur">
-            <p className="font-semibold text-white">Call context</p>
-            <p>New customer Eddie Guzman requested a window cleaning appointment.</p>
-            <p className="mt-2 text-xs text-white/70">Agent captured service details and scheduled efficiently.</p>
+      actions={{
+        content: (
+          <div className="flex flex-col gap-4">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-100/90 backdrop-blur">
+              <p className="font-semibold text-white">Call context</p>
+              <p>New customer Eddie Guzman requested a window cleaning appointment.</p>
+              <p className="mt-2 text-xs text-white/70">Agent captured service details and scheduled efficiently.</p>
+            </div>
           </div>
-          <a
-            href="https://www.loom.com/share/8a043524e6a940c7b64c06e32ac6329a"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-          >
-            Open Loom in new tab
-          </a>
-        </div>
-      }
+        ),
+        ctas: [
+          {
+            label: "Open Loom in new tab",
+            href: "https://www.loom.com/share/8a043524e6a940c7b64c06e32ac6329a",
+            target: "_blank",
+          },
+        ],
+      }}
     >
       <div className="grid gap-4 text-base sm:text-lg">
         <p>Shows how the agent handles intake, scheduling, and confirmation.</p>

@@ -10,16 +10,13 @@ export default function ProjectsLandingPage() {
       title="Landing Page Scaffold"
       subtitle="Conversion-focused scaffolds for fast launches"
       accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
-      actions={
-        <a
-          href="https://landing-page-scaffold.vercel.app"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-        >
-          View scaffold demo
-        </a>
-      }
+      actions={[
+        {
+          label: "View scaffold demo",
+          href: "https://landing-page-scaffold.vercel.app",
+          target: "_blank",
+        },
+      ]}
     >
       <div className="grid gap-4 text-base sm:text-lg">
         <p>Rapidly deployable landing structures for campaigns, lead capture, and demos.</p>
