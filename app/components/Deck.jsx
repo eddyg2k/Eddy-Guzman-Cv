@@ -31,13 +31,6 @@ export default function Deck({ slides }) {
   }, []);
 
   useEffect(() => {
-    if (currentIndex === 0) {
-      const timer = setTimeout(() => navigate(1), 5000);
-      return () => clearTimeout(timer);
-    }
-  }, [currentIndex, navigate]);
-
-  useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowDown" || event.key === "PageDown") {
         event.preventDefault();

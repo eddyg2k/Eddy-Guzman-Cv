@@ -22,7 +22,10 @@ export default function ReservoDemo() {
       }
     >
       <div className="grid gap-4 text-base sm:text-lg">
-        <p>Reservo’s AI host handles the full conversational flow end-to-end.</p>
+        <p>
+          This is just a demo, there is a delay on the backend so you need to wait till it deploys; it is intentional to avoid misuse
+          or curious people.
+        </p>
         <EmbedSlide url="https://reservo.live" title="Reservo live demo" loadingMessage="Loading Reservo demo..." />
         <p className="text-sm text-slate-200/80">
           Embedded experience mirrors the production host for live ordering and reservations.
