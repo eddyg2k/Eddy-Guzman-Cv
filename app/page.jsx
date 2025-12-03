@@ -4,6 +4,7 @@ import { useState } from "react";
 import Deck from "./components/Deck";
 import IntroShowcase from "./components/IntroShowcase";
 import Hero from "./slides/Hero";
+import EddyAIDemo from "./slides/EddyAIDemo";
 import ReservoWhat from "./slides/Reservo_1_What";
 import ReservoWhy from "./slides/Reservo_2_Why";
 import ReservoDemo from "./slides/Reservo_3_Demo";
@@ -21,6 +22,7 @@ import Contact from "./slides/Contact";
 
 const backgrounds = [
   "radial-gradient(circle at 15% 20%, rgba(255,255,255,0.05), transparent 36%), radial-gradient(circle at 80% 10%, rgba(255,255,255,0.04), transparent 32%), linear-gradient(135deg, #050505 0%, #0d0f12 55%, #151820 100%)",
+  "radial-gradient(circle at 18% 22%, rgba(255,255,255,0.06), transparent 34%), radial-gradient(circle at 78% 12%, rgba(255,255,255,0.05), transparent 32%), linear-gradient(135deg, #06100c 0%, #0c1816 55%, #12232b 100%)",
   "radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05), transparent 36%), radial-gradient(circle at 80% 0%, rgba(255,255,255,0.04), transparent 32%), linear-gradient(135deg, #080809 0%, #101318 55%, #191d25 100%)",
   "radial-gradient(circle at 15% 30%, rgba(255,255,255,0.06), transparent 34%), radial-gradient(circle at 85% 10%, rgba(255,255,255,0.05), transparent 32%), linear-gradient(135deg, #0b0c0e 0%, #13171d 55%, #1c212b 100%)",
   "radial-gradient(circle at 20% 35%, rgba(255,255,255,0.06), transparent 34%), radial-gradient(circle at 75% 10%, rgba(255,255,255,0.05), transparent 32%), linear-gradient(135deg, #0d0f12 0%, #161b22 55%, #1f2530 100%)",
@@ -39,20 +41,21 @@ const backgrounds = [
 
 const slides = [
   { id: "hero", component: Hero, background: backgrounds[0] },
-  { id: "reservo-what", component: ReservoWhat, background: backgrounds[1] },
-  { id: "reservo-why", component: ReservoWhy, background: backgrounds[2] },
-  { id: "reservo-demo", component: ReservoDemo, background: backgrounds[3] },
-  { id: "voiceai-overview", component: VoiceAIOverview, background: backgrounds[4] },
-  { id: "voiceai-call", component: VoiceAICallDemo, background: backgrounds[5] },
-  { id: "voiceai-features", component: VoiceAIFeatures, background: backgrounds[6] },
-  { id: "custom-objects-explanation", component: CustomObjectsExplanation, background: backgrounds[7] },
-  { id: "custom-objects-loom", component: CustomObjectsLoomDemo, background: backgrounds[8] },
-  { id: "projects-elemental", component: ProjectsElemental, background: backgrounds[9] },
-  { id: "discord-bots", component: DiscordBots, background: backgrounds[10] },
-  { id: "elevenlabs", component: ElevenLabsSlide, background: backgrounds[11] },
-  { id: "educational-apps", component: EducationalApps, background: backgrounds[12] },
-  { id: "thank-you", component: ThankYou, background: backgrounds[13] },
-  { id: "contact", component: Contact, background: backgrounds[14] },
+  { id: "eddy-ai-demo", component: EddyAIDemo, background: backgrounds[1] },
+  { id: "reservo-what", component: ReservoWhat, background: backgrounds[2] },
+  { id: "reservo-why", component: ReservoWhy, background: backgrounds[3] },
+  { id: "reservo-demo", component: ReservoDemo, background: backgrounds[4] },
+  { id: "voiceai-overview", component: VoiceAIOverview, background: backgrounds[5] },
+  { id: "voiceai-call", component: VoiceAICallDemo, background: backgrounds[6] },
+  { id: "voiceai-features", component: VoiceAIFeatures, background: backgrounds[7] },
+  { id: "custom-objects-explanation", component: CustomObjectsExplanation, background: backgrounds[8] },
+  { id: "custom-objects-loom", component: CustomObjectsLoomDemo, background: backgrounds[9] },
+  { id: "projects-elemental", component: ProjectsElemental, background: backgrounds[10] },
+  { id: "discord-bots", component: DiscordBots, background: backgrounds[11] },
+  { id: "elevenlabs", component: ElevenLabsSlide, background: backgrounds[12] },
+  { id: "educational-apps", component: EducationalApps, background: backgrounds[13] },
+  { id: "thank-you", component: ThankYou, background: backgrounds[14] },
+  { id: "contact", component: Contact, background: backgrounds[15] },
 ];
 
 export default function HomePage() {
