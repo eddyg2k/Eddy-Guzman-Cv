@@ -81,27 +81,33 @@ export default function Slide({
           <div className="absolute inset-0 -z-20 rounded-[2.5rem] border border-white/5 opacity-0 transition duration-700 group-hover:opacity-100" />
 
           {(eyebrow || title || subtitle || headingMedia) && (
-            <div className="flex flex-col gap-3">
-              <div className="flex items-center gap-3">
-                {headingMedia && (
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/20 backdrop-blur">
-                    {typeof headingMedia === "string" ? (
-                      <span className="text-xl text-white/90" aria-hidden>
-                        {headingMedia}
-                      </span>
-                    ) : (
-                      headingMedia
-                    )}
-                  </div>
-                )}
-                <div className="flex flex-col gap-2">
-                  {eyebrow && <p className="text-xs uppercase tracking-[0.35em] text-sky-200/80 sm:text-sm">{eyebrow}</p>}
-                  {title && (
-                    <h1 className="text-3xl font-semibold leading-tight text-slate-50 sm:text-4xl lg:text-5xl">
-                      {title}
-                    </h1>
+            <div className="flex w-full justify-center">
+              <div className="relative w-full max-w-4xl overflow-hidden rounded-2xl border border-white/10 bg-white/10 px-6 py-5 text-center shadow-[0_25px_80px_-50px_rgba(0,0,0,0.95)] ring-1 ring-white/15 backdrop-blur-xl sm:px-8 sm:py-7">
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.12),transparent_32%),radial-gradient(circle_at_80%_0%,rgba(255,255,255,0.1),transparent_28%)]" />
+                <div className="pointer-events-none absolute inset-px rounded-[1.1rem] border border-white/5 bg-white/5 opacity-20" />
+
+                <div className="relative flex flex-col items-center gap-3">
+                  {headingMedia && (
+                    <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/25 shadow-[0_10px_35px_-18px_rgba(0,0,0,0.9)] backdrop-blur">
+                      {typeof headingMedia === "string" ? (
+                        <span className="text-2xl font-semibold text-white/90" aria-hidden>
+                          {headingMedia}
+                        </span>
+                      ) : (
+                        headingMedia
+                      )}
+                    </div>
                   )}
-                  {subtitle && <p className="max-w-3xl text-lg text-slate-200/80 sm:text-xl">{subtitle}</p>}
+
+                  <div className="flex max-w-3xl flex-col items-center gap-2">
+                    {eyebrow && <p className="text-xs uppercase tracking-[0.38em] text-sky-200/85 sm:text-sm">{eyebrow}</p>}
+                    {title && (
+                      <h1 className="text-3xl font-extrabold leading-tight text-slate-50 sm:text-4xl lg:text-5xl">
+                        {title}
+                      </h1>
+                    )}
+                    {subtitle && <p className="max-w-2xl text-base text-slate-100/85 sm:text-lg">{subtitle}</p>}
+                  </div>
                 </div>
               </div>
             </div>
