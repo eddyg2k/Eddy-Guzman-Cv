@@ -41,28 +41,6 @@ export default function Contact() {
           <p>
             Phone: <a className="font-semibold underline decoration-white/50" href="tel:+19999053013">999 905 3013</a>
           </p>
-          <p className="flex items-center gap-3">
-            Discord chat:
-            <a
-              className="font-semibold underline decoration-white/50"
-              href="https://discord.com/api/guilds/1419830884202315788/widget.json"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Live widget JSON
-            </a>
-          </p>
-        </div>
-        <div className="mt-2 w-full max-w-xl overflow-hidden rounded-2xl border border-white/15 bg-black/30 shadow-lg">
-          <iframe
-            src="https://discord.com/widget?id=1419830884202315788&theme=dark"
-            width="100%"
-            height="420"
-            allowTransparency
-            frameBorder="0"
-            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            title="Discord chat"
-          ></iframe>
         </div>
       </div>
     </Slide>

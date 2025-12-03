@@ -72,7 +72,7 @@ export default function IntroShowcase({ onFinish }) {
 
         <div className="text-center">
           <div className="text-xs uppercase tracking-[0.4em] text-slate-200/70">Perspectivity</div>
-          <div className="mt-3 text-3xl font-semibold sm:text-4xl">Cinematic systems engineer</div>
+          <div className="mt-3 text-3xl font-semibold sm:text-4xl">Welcome to my Online CV</div>
           <div className="mt-2 text-lg text-slate-200/80">
             Voice AI, automation, and interactive stories for the next generation of ops
           </div>

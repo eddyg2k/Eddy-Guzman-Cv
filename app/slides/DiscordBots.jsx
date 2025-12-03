@@ -13,7 +13,7 @@ export default function DiscordBots() {
         <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-inner">
           <div className="aspect-video">
             <iframe
-              src="https://discord.com/widget?id=613425648685547541&theme=dark"
+              src="https://discord.com/widget?id=1419830884202315788&theme=dark"
               sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
               className="h-full w-full"
               title="Discord widget"
@@ -33,6 +33,12 @@ export default function DiscordBots() {
           <li className="flex items-start gap-3">
             <span className="mt-1 h-2 w-2 rounded-full bg-violet-300" />
             <p>Onboarding and category-level bots deliver resources on demand.</p>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="mt-1 h-2 w-2 rounded-full bg-violet-300" />
+            <p>
+              Live presence: <a className="font-semibold underline decoration-white/50" href="https://discord.com/api/guilds/1419830884202315788/widget.json" target="_blank" rel="noreferrer">widget JSON</a>.
+            </p>
           </li>
         </ul>
       </div>
