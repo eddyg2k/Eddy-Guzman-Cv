@@ -8,7 +8,7 @@ export default function EddyAIDemo() {
       eyebrow="Custom GPT Demo"
       title="Eddy AI + n8n email workflow"
       subtitle="Showcase of a custom GPT wired to trigger an n8n webhook that sends a live email"
-      accent="from-emerald-400/70 via-cyan-400/60 to-blue-500/60"
+      accent="from-emerald-500/65 via-emerald-400/60 to-emerald-300/55"
       actions={{
         content: (
           <div className="space-y-2 text-sm text-white/90">
