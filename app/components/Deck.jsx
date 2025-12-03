@@ -198,7 +198,11 @@ export default function Deck({ slides }) {
         const textTimeline = gsap.timeline({ defaults: { ease: scene.text.ease } });
         const enteringText = textRefs.current[activeIndex];
         const leavingText = textRefs.current[previousIndex];
-        gsap.set(textRefs.current, { transformStyle: "preserve-3d" });
+        const textElements = textRefs.current.filter(Boolean);
+
+        if (textElements.length) {
+          gsap.set(textElements, { transformStyle: "preserve-3d" });
+        }
 
         if (leavingText && leavingText !== enteringText) {
           textTimeline.to(
