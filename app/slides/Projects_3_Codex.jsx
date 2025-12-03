@@ -10,16 +10,13 @@ export default function ProjectsCodex() {
       title="Codex Development Flow"
       subtitle="Structured build process for AI-forward products"
       accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
-      actions={
-        <a
-          href="https://codex-explain.vercel.app"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-        >
-          Explore build flow
-        </a>
-      }
+      actions={[
+        {
+          label: "Explore build flow",
+          href: "https://codex-explain.vercel.app",
+          target: "_blank",
+        },
+      ]}
     >
       <div className="grid gap-4 text-base sm:text-lg">
         <p>Codex is the working system behind these cinematic decks and automation builds.</p>

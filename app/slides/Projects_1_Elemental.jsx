@@ -10,16 +10,13 @@ export default function ProjectsElemental() {
       title="Elemental English Web App"
       subtitle="Language-learning landing that feeds AI lesson flows"
       accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
-      actions={
-        <a
-          href="https://elemental-english-web-app.vercel.app/landing"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-        >
-          Open live site
-        </a>
-      }
+      actions={[
+        {
+          label: "Open live site",
+          href: "https://elemental-english-web-app.vercel.app/landing",
+          target: "_blank",
+        },
+      ]}
     >
       <div className="grid gap-4 text-base sm:text-lg">
         <p>Built to demonstrate AI-assisted ESL content with a cinematic hero flow.</p>
