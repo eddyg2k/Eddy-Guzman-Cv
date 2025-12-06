@@ -21,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
-      <body className="bg-ink text-slate-100 antialiased selection:bg-highlight/40 selection:text-white">
+      <body className="bg-ink text-slate-100 antialiased selection:bg-highlight/40 selection:text-white overflow-hidden h-screen w-screen">
         <Script src="https://cdn.tailwindcss.com" strategy="beforeInteractive" />
         <Script src="/_sdk/element_sdk.js" strategy="lazyOnload" />
         {children}

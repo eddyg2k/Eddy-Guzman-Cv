@@ -69,13 +69,13 @@ export default function Deck({ slides }) {
 
   return (
     <div
-      className="relative flex min-h-[100dvh] w-screen flex-col overflow-hidden bg-gradient-to-b from-black to-zinc-900 text-slate-50"
+      className="relative flex h-screen w-screen flex-col overflow-hidden bg-gradient-to-b from-black to-zinc-900 text-slate-50"
       onWheel={handleWheel}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
       <div className="relative z-10 flex h-full w-full justify-center">
-        <div className="flex w-full justify-center overflow-y-auto px-4 py-10" style={{ minHeight: "100dvh" }}>
+        <div className="flex h-full w-full justify-center px-4">
           {CurrentSlide && <CurrentSlide />}
         </div>
       </div>
