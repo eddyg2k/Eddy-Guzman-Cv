@@ -46,14 +46,14 @@ export default function EmbedSlide({ url, title, loadingMessage = "Loading demo.
           <p className="text-sm sm:text-base text-white/90">{loadingMessage}</p>
         </div>
       )}
-      <div className="relative aspect-video w-full min-h-[260px] max-h-[60vh] sm:max-h-[65vh]">
+      <div className="w-full aspect-video max-h-[600px] overflow-hidden rounded-xl border border-white/10">
         <iframe
           src={url}
           title={title}
           loading="lazy"
           allow="camera; microphone; autoplay; encrypted-media; picture-in-picture"
           allowFullScreen
-          className="absolute inset-0 h-full w-full border-0"
+          className="w-full h-full"
           onLoad={() => setIsLoaded(true)}
           onError={() => setLoadError(true)}
         />
