@@ -1,15 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import LayeredBackground from "./LayeredBackground";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 export default function Deck({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const touchStartRef = useRef(null);
   const animationTimeout = useRef(null);
-
-  const backgrounds = useMemo(() => slides.map((slide) => slide.background), [slides]);
 
   const navigate = useCallback(
     (direction) => {
@@ -68,33 +65,19 @@ export default function Deck({ slides }) {
     touchStartRef.current = null;
   };
 
+  const CurrentSlide = slides[currentIndex];
+
   return (
     <div
-      className="relative w-screen overflow-hidden text-slate-50"
-      style={{ minHeight: "100dvh" }}
+      className="relative flex min-h-[100dvh] w-screen flex-col overflow-hidden bg-gradient-to-b from-black to-zinc-900 text-slate-50"
       onWheel={handleWheel}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <LayeredBackground index={currentIndex} backgrounds={backgrounds} />
-
-      <div className="relative z-10 h-full w-full" style={{ minHeight: "100dvh" }}>
-        {slides.map(({ component: SlideComponent, id }, index) => (
-          <div
-            key={id}
-            className={`absolute inset-0 flex justify-center overflow-y-auto px-4 py-10 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-              index === currentIndex
-                ? "pointer-events-auto opacity-100 translate-y-0"
-                : "pointer-events-none opacity-0 translate-y-8"
-            }`}
-            style={{ minHeight: "100dvh" }}
-            aria-hidden={index !== currentIndex}
-          >
-            <div className="flex w-full justify-center">
-              <SlideComponent />
-            </div>
-          </div>
-        ))}
+      <div className="relative z-10 flex h-full w-full justify-center">
+        <div className="flex w-full justify-center overflow-y-auto px-4 py-10" style={{ minHeight: "100dvh" }}>
+          {CurrentSlide && <CurrentSlide />}
+        </div>
       </div>
 
       <div className="pointer-events-none absolute inset-x-0 bottom-6 z-20 flex items-center justify-center gap-2 text-xs uppercase tracking-[0.3em] text-white/60">
