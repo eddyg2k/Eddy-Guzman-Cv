@@ -1,21 +1,18 @@
 "use client";
 
-import Slide from "../components/Slide";
+import SlideFrame from "../components/SlideFrame";
 
 export default function Hero() {
   return (
-    <Slide
-      eyebrow="Eddy Guzman"
-      title="Automation Engineer & Voice AI Builder"
-      subtitle="Designing production-ready AI systems, cinematic experiences, and operational workflows"
-      accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
-      actions={
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-          <p className="text-sm font-semibold text-white">Deck format</p>
-          <p className="text-sm text-slate-200/80">One slide visible at a time. No scrolling. Cinematic fades with upward drift.</p>
-        </div>
-      }
-    >
+    <SlideFrame title="Automation Engineer & Voice AI Builder">
+      <p className="text-xs uppercase tracking-[0.38em] text-sky-200/85 sm:text-sm">Eddy Guzman</p>
+      <p className="max-w-2xl text-base text-slate-100/85 sm:text-lg">
+        Designing production-ready AI systems, cinematic experiences, and operational workflows
+      </p>
+      <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200/90 backdrop-blur">
+        <p className="font-semibold text-white">Deck format</p>
+        <p>One slide visible at a time. No scrolling. Cinematic fades with upward drift.</p>
+      </div>
       <ul className="grid gap-3 text-base leading-relaxed sm:text-lg">
         <li className="flex items-start gap-3">
           <span className="mt-1 h-2 w-2 rounded-full bg-teal-300" />
@@ -32,6 +29,6 @@ export default function Hero() {
           <p>This CV is delivered as a cinematic deck. Scroll, swipe, or tap arrows to navigate.</p>
         </li>
       </ul>
-    </Slide>
+    </SlideFrame>
   );
 }
