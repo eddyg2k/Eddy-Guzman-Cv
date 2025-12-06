@@ -70,29 +70,25 @@ export default function Deck({ slides }) {
 
   return (
     <div
-      className="relative w-screen overflow-hidden text-slate-50"
-      style={{ minHeight: "100dvh" }}
+      className="relative h-screen w-screen overflow-hidden text-slate-50"
       onWheel={handleWheel}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
       <LayeredBackground index={currentIndex} backgrounds={backgrounds} />
 
-      <div className="relative z-10 h-full w-full" style={{ minHeight: "100dvh" }}>
+      <div className="relative z-10 h-full w-full">
         {slides.map(({ component: SlideComponent, id }, index) => (
           <div
             key={id}
-            className={`absolute inset-0 flex justify-center overflow-y-auto px-4 py-10 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               index === currentIndex
                 ? "pointer-events-auto opacity-100 translate-y-0"
                 : "pointer-events-none opacity-0 translate-y-8"
             }`}
-            style={{ minHeight: "100dvh" }}
             aria-hidden={index !== currentIndex}
           >
-            <div className="flex w-full justify-center">
-              <SlideComponent />
-            </div>
+            <SlideComponent />
           </div>
         ))}
       </div>
@@ -107,3 +103,4 @@ export default function Deck({ slides }) {
     </div>
   );
 }
+
