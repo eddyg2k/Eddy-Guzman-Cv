@@ -11,7 +11,7 @@ export default function DiscordBots() {
       accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
         <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-inner">
-          <div className="aspect-video">
+          <div className="h-[320px] max-h-[400px]">
             <iframe
               src="https://discord.com/widget?id=1419830884202315788&theme=dark"
               sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"

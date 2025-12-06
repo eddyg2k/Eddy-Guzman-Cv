@@ -8,8 +8,9 @@
 
 html,
 body {
+  height: 100dvh;
   min-height: 100dvh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {

@@ -46,7 +46,7 @@ export default function EmbedSlide({ url, title, loadingMessage = "Loading demo.
           <p className="text-sm sm:text-base text-white/90">{loadingMessage}</p>
         </div>
       )}
-      <div className="relative aspect-video w-full min-h-[260px] max-h-[60vh] sm:max-h-[65vh]">
+      <div className="relative h-[400px] max-h-[400px] w-full">
         <iframe
           src={url}
           title={title}
