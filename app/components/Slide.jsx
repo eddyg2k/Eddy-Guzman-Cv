@@ -68,7 +68,7 @@ export default function Slide({
   const headingMedia = headingAdornment || headingAvatar || headingIcon;
 
   return (
-    <div className="relative flex h-screen w-screen items-center justify-center px-6 sm:px-10">
+    <div className="relative flex w-full items-center justify-center px-6 py-10 sm:px-10 sm:py-12">
       <div className="group relative w-full max-w-6xl overflow-hidden rounded-3xl bg-transparent px-6 py-8 sm:px-10 sm:py-12">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.14),transparent_36%),radial-gradient(circle_at_80%_0%,rgba(255,255,255,0.1),transparent_32%)]" />
         <div className="pointer-events-none absolute inset-8 -z-20 rounded-[2.5rem] bg-black/25 blur-3xl" />
