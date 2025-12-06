@@ -69,7 +69,7 @@ export default function Slide({
 
   return (
     <div className="relative flex w-full items-center justify-center px-6 py-10 sm:px-10 sm:py-12">
-      <div className="group relative w-full max-w-6xl overflow-hidden rounded-3xl bg-transparent px-6 py-8 sm:px-10 sm:py-12">
+      <div className="group relative w-full max-w-[79.2rem] overflow-hidden rounded-3xl bg-transparent px-6 py-8 sm:px-10 sm:py-12">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.14),transparent_36%),radial-gradient(circle_at_80%_0%,rgba(255,255,255,0.1),transparent_32%)]" />
         <div className="pointer-events-none absolute inset-8 -z-20 rounded-[2.5rem] bg-black/25 blur-3xl" />
         <div className="absolute inset-0 -z-10 rounded-[2.5rem] border border-white/10 bg-white/5 backdrop-blur-xl transition duration-700 ease-out group-hover:shadow-[0_30px_80px_-45px_rgba(0,0,0,0.9)]" />
@@ -82,7 +82,7 @@ export default function Slide({
 
           {(eyebrow || title || subtitle || headingMedia) && (
             <div className="flex w-full justify-center">
-              <div className="relative w-full max-w-4xl overflow-hidden rounded-2xl border border-white/10 bg-white/10 px-6 py-5 text-center shadow-[0_25px_80px_-50px_rgba(0,0,0,0.95)] ring-1 ring-white/15 backdrop-blur-xl sm:px-8 sm:py-7">
+              <div className="relative w-full max-w-[61.6rem] overflow-hidden rounded-2xl border border-white/10 bg-white/10 px-6 py-5 text-center shadow-[0_25px_80px_-50px_rgba(0,0,0,0.95)] ring-1 ring-white/15 backdrop-blur-xl sm:px-8 sm:py-7">
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.12),transparent_32%),radial-gradient(circle_at_80%_0%,rgba(255,255,255,0.1),transparent_28%)]" />
                 <div className="pointer-events-none absolute inset-px rounded-[1.1rem] border border-white/5 bg-white/5 opacity-20" />
 
