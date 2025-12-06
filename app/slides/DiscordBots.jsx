@@ -10,7 +10,7 @@ export default function DiscordBots() {
       subtitle="Recepcionista bot, onboarding flows, and category-level automations"
       accent="from-slate-900/70 via-gray-700/55 to-gray-500/40"
       actions={
-        <div className="w-full max-w-4xl h-[500px] overflow-hidden rounded-xl">
+        <div className="w-full max-w-4xl h-[450px] max-h-[450px] overflow-hidden rounded-xl">
           <iframe
             src="https://discord.com/widget?id=1419830884202315788&theme=dark"
             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"

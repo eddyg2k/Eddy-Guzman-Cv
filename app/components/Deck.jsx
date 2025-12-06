@@ -69,7 +69,7 @@ export default function Deck({ slides }) {
 
   return (
     <div
-      className="relative flex h-screen w-screen flex-col overflow-hidden bg-gradient-to-b from-black to-zinc-900 text-slate-50"
+      className="relative flex h-[85vh] w-screen flex-col overflow-hidden bg-gradient-to-b from-black to-zinc-900 text-slate-50"
       onWheel={handleWheel}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}

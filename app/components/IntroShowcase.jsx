@@ -13,7 +13,7 @@ export default function IntroShowcase({ onFinish }) {
   }, [onFinish]);
 
   return (
-    <div className="relative flex h-screen w-screen items-center justify-center overflow-hidden bg-black text-white">
+    <div className="relative flex h-[85vh] w-screen items-center justify-center overflow-hidden bg-black text-white">
       <motion.div
         className="pointer-events-none absolute inset-0 opacity-70"
         initial={{ scale: 1.1, rotate: 0 }}
