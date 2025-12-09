@@ -17,6 +17,7 @@ import ProjectsElemental from "./slides/Projects_1_Elemental";
 import DiscordBots from "./slides/DiscordBots";
 import ElevenLabsSlide from "./slides/ElevenLabs";
 import EducationalApps from "./slides/EducationalApps";
+import TestSlide from "./slides/TestSlide";
 import ThankYou from "./slides/ThankYou";
 import Contact from "./slides/Contact";
 
@@ -35,6 +36,7 @@ const slides = [
   DiscordBots,
   ElevenLabsSlide,
   EducationalApps,
+  TestSlide,
   ThankYou,
   Contact,
 ];
